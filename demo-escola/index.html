@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/global.css">
+  <link rel="stylesheet" href="assets/css/home.css">
+  <title>Página Inicial | Escola de Inspeção</title>
+</head>
+
+<body>
+  <div class="bg-glow"></div>
+
+  <header>
+    <div class="brand">
+      <img src="assets/img/logo.png" alt="Logo Escola">
+      <span>Escola de Inspeção</span>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html" class="active">Página Inicial</a></li>
+        <li><a href="pages/cursos.html">Treinamentos</a></li>
+        <li>Carrinho</li>
+        <li><a href="pages/contato.html">Contatos</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container">
+
+    <div class="tech-circle">
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+    </div>
+
+    <div class="hero-top">
+      <span class="hero-eyebrow">FORMA-SE COMO</span>
+      <h1 class="hero-title">Inspetor de Solda</h1>
+      <p class="hero-subtitle">
+        Capacitação profissional em inspeção de solda e ensaios não destrutivos,
+        com foco em normas técnicas e no mercado de trabalho.
+      </p>
+    </div>
+
+    <div class="list">
+
+      <div class="item active">
+        <div class="product-img">
+          <img src="assets/img/visual-solda.png" alt="Visual de Solda">
+        </div>
+        <div class="content">
+          <p class="product-tag">Curso Preparatório</p>
+          <p class="product-name">Visual de Solda</p>
+          <p class="description">O Curso de Ensaio Visual de Solda tem como objetivo capacitar profissionais
+            para a avaliação visual de juntas soldadas, conforme normas técnicas nacionais e internacionais.
+            O ensaio visual é a etapa mais importante da inspeção de soldagem, sendo aplicado antes, durante
+            e após o processo de solda, permitindo a identificação de descontinuidades superficiais, falhas
+            geométricas e não conformidades dimensionais.</p>
+          <button class="btn"><a href="pages/cursos/ensaio-visual.html">Saiba Mais</a></button>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="product-img">
+          <img src="assets/img/liquido-penetrante.png" alt="Líquido Penetrante">
+        </div>
+        <div class="content">
+          <p class="product-tag">Curso Preparatório</p>
+          <p class="product-name">Líquido Penetrante</p>
+          <p class="description">O Curso de Ensaio por Líquido Penetrante (LP) tem como objetivo capacitar
+            profissionais para a detecção de descontinuidades superficiais em materiais metálicos e não
+            metálicos, por meio de um dos métodos mais utilizados nos Ensaios Não Destrutivos (END). Este
+            método é amplamente aplicado na inspeção de soldas, peças fundidas, forjadas e usinadas.</p>
+          <button class="btn"><a href="pages/cursos/liquido-penetrante.html">Saiba Mais</a></button>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="product-img">
+          <img src="assets/img/particula-magnetica.png" alt="Partícula Magnética">
+        </div>
+        <div class="content">
+          <p class="product-tag">Curso Preparatório</p>
+          <p class="product-name">Partícula Magnética</p>
+          <p class="description">O Curso de Ensaio por Partículas Magnéticas (PM) tem como objetivo capacitar
+            profissionais para a detecção de descontinuidades superficiais e subsuperficiais em materiais
+            ferromagnéticos, por meio de um dos métodos mais eficientes dos Ensaios Não Destrutivos (END),
+            amplamente utilizado na inspeção de soldas, componentes estruturais e peças industriais.</p>
+          <button class="btn"><a href="pages/cursos/particula-magnetica.html">Saiba Mais</a></button>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="arrows">
+      <button class="arrow-btn" id="prev">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#fff" viewBox="0 0 16 16">
+          <path d="m3.86 8.753 5.482 4.796c.646.566 1.658.106 1.658-.753V3.204a1 1 0 0 0-1.659-.753l-5.48 4.796a1 1 0 0 0 0 1.506z"/>
+        </svg>
+      </button>
+      <button class="arrow-btn" id="next">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#fff" viewBox="0 0 16 16">
+          <path d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z"/>
+        </svg>
+      </button>
+    </div>
+
+    <div class="indicators">
+      <div class="numbers">01</div>
+      <div class="dots">
+        <div class="dot active"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+      </div>
+    </div>
+
+  </main>
+
+  <script src="assets/js/carousel.js"></script>
+  <script src="assets/js/global.js"></script>
+</body>
+
+</html>

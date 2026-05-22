@@ -1,0 +1,144 @@
+/* ===========================
+   CURSOS — GRADE DE CURSOS
+=========================== */
+
+html, body {
+  overflow-x: hidden;
+}
+
+/* ===========================
+   CÍRCULOS - CURSOS
+=========================== */
+.tech-circle .circle:nth-child(1) {
+  width: 260px;
+  height: 260px;
+  top: 140px;
+  left: -120px;
+  border-color: rgba(27, 215, 96, 0.15);
+}
+
+.tech-circle .circle:nth-child(2) {
+  width: 340px;
+  height: 340px;
+  top: 50%;
+  right: -160px;
+  transform: translateY(-50%);
+  border-color: rgba(27, 215, 96, 0.15);
+}
+
+.tech-circle .circle:nth-child(3) {
+  width: 180px;
+  height: 180px;
+  bottom: 80px;
+  left: 180px;
+  border-color: rgba(27, 215, 96, 0.15);
+}
+
+/* ===========================
+   GRADE DE CURSOS
+=========================== */
+.courses-container {
+  max-width: 1300px;
+  margin: auto;
+  padding: 40px 40px 80px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 40px;
+}
+
+.course-card {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(27, 215, 96, 0.2);
+  border-radius: 18px;
+  padding: 30px;
+  text-align: center;
+  transition: 0.4s;
+}
+
+.course-card:hover {
+  transform: translateY(-8px);
+  border-color: #1bd760;
+  box-shadow: 0 20px 50px rgba(0, 255, 140, 0.15);
+}
+
+.course-card img {
+  max-width: 140px;
+  margin-bottom: 20px;
+  filter: drop-shadow(0 0 20px rgba(27, 215, 96, 0.4));
+}
+
+.course-card h3 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 22px;
+  margin-bottom: 6px;
+}
+
+.course-tag {
+  color: #1bd760;
+  font-size: 13px;
+  margin-bottom: 20px;
+}
+
+.course-card ul {
+  list-style: none;
+  margin-bottom: 20px;
+}
+
+.course-card ul li {
+  font-size: 14px;
+  color: #cfd3ff;
+  margin-bottom: 8px;
+}
+
+.course-hours {
+  display: block;
+  margin-bottom: 20px;
+  font-size: 13px;
+  color: #aaa;
+}
+
+/* ===========================
+   BOTÕES DOS CARDS
+=========================== */
+.course-actions {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+}
+
+.btn-outline {
+  padding: 10px 18px;
+  border-radius: 8px;
+  border: 1px solid #1bd760;
+  color: #1bd760;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.btn-outline:hover {
+  background: #1bd760;
+  color: #000;
+}
+
+.course-card .btn-primary {
+  padding: 10px 22px;
+  border-radius: 8px;
+  font-size: 14px;
+  box-shadow: none;
+}
+
+.course-card .btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(0, 255, 140, 0.4);
+}
+
+/* ===========================
+   RESPONSIVO
+=========================== */
+@media (max-width: 768px) {
+  .courses-container {
+    padding: 20px 20px 60px;
+  }
+}

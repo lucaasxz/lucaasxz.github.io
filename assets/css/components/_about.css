@@ -1,0 +1,71 @@
+#about {
+  background: var(--bg-white);
+  padding: 6rem 0;
+}
+
+.about-layout {
+  display: grid;
+  grid-template-columns: 1.3fr 0.7fr;
+  gap: 5rem;
+  align-items: start;
+}
+
+.about-text h2 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: var(--text);
+  margin-bottom: 1.5rem;
+}
+
+.about-text p {
+  font-size: 1rem;
+  color: var(--text-muted);
+  line-height: 1.8;
+  margin-bottom: 1.25rem;
+}
+
+.about-text p:last-child { margin-bottom: 0; }
+
+.about-photo {
+  position: relative;
+  border-radius: var(--radius);
+  overflow: hidden;
+  aspect-ratio: 3 / 4;
+  background: #d4cfc8;
+  box-shadow: 0 8px 32px rgba(0,0,0,.08);
+  transform: rotate(15deg);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.about-photo:hover {
+  transform: rotate(0deg) scale(1.02);
+  box-shadow: 0 20px 48px rgba(0,0,0,.15);
+}
+
+/* Overlay gradiente sutil no hover */
+.about-photo::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    transparent 55%,
+    rgba(0,0,0,0.25) 100%
+  );
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.about-photo:hover::after { opacity: 1; }
+
+.about-photo svg,
+.about-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.about-photo:hover img { transform: scale(1.04); }

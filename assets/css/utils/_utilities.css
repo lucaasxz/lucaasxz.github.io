@@ -1,0 +1,72 @@
+/* Noscript */
+.noscript-banner {
+  background: #f59e0b;
+  color: #111;
+  text-align: center;
+  padding: 0.6rem 1rem;
+  font-size: 0.88rem;
+  font-weight: 600;
+}
+
+/* Container */
+.container {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* Section heading shared style */
+.section-heading {
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  font-weight: 800;
+  color: var(--text);
+  margin-bottom: 2.5rem;
+  text-align: center;
+}
+
+/* Scroll-reveal */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.65s ease, transform 0.65s ease;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Connect buttons */
+.btn-dark {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.85rem 2.2rem;
+  border-radius: 50px;
+  background: var(--text);
+  color: var(--bg);
+  font-weight: 700;
+  font-size: 0.95rem;
+  font-family: inherit;
+  border: 2px solid var(--text);
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+.btn-dark:hover { opacity: 0.8; }
+
+.btn-outlined {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.85rem 2.2rem;
+  border-radius: 50px;
+  background: transparent;
+  color: var(--text);
+  font-weight: 700;
+  font-size: 0.95rem;
+  font-family: inherit;
+  border: 2px solid var(--text);
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+.btn-outlined:hover {
+  background: var(--text);
+  color: var(--bg);
+}

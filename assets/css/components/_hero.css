@@ -1,0 +1,163 @@
+/* ── Hero entrance animations ─────────────── */
+@keyframes hero-enter {
+  from { opacity: 0; transform: translateY(18px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+#hero {
+  min-height: 88vh;
+  display: flex;
+  align-items: center;
+  padding: 5rem 4rem;
+  background: var(--bg);
+}
+
+.hero-layout {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: 4rem;
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.hero-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.hero-image {
+  width: clamp(220px, 22vw, 340px);
+  aspect-ratio: 3 / 4;
+  border-radius: var(--radius);
+  overflow: hidden;
+  flex-shrink: 0;
+  box-shadow: 0 12px 40px rgba(0,0,0,.15);
+  transform: rotate(35deg);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  animation: hero-enter 0.85s ease both 0.3s;
+}
+
+.hero-image:hover {
+  transform: rotate(0deg) scale(1.02);
+  box-shadow: 0 20px 56px rgba(0,0,0,.2);
+}
+
+.hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* ── Available badge ─────────────────────── */
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  background: var(--bg-white);
+  border: 1px solid var(--border);
+  border-radius: 50px;
+  padding: 0.35rem 0.9rem 0.35rem 0.7rem;
+  margin-bottom: 1.5rem;
+  animation: hero-enter 0.7s ease both 0.05s;
+}
+
+.hero-badge-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #22c55e;
+  flex-shrink: 0;
+}
+
+@keyframes pulse-green {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(34,197,94,.5); }
+  60%       { box-shadow: 0 0 0 6px rgba(34,197,94,0); }
+}
+
+.hero-badge-dot { animation: pulse-green 2.2s ease-in-out infinite; }
+
+/* ── Title ───────────────────────────────── */
+.hero-title {
+  font-size: clamp(3.2rem, 7vw, 6rem);
+  font-weight: 800;
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+  color: var(--text);
+  margin-bottom: 1.5rem;
+  animation: hero-enter 0.85s ease both 0.2s;
+}
+
+/* Inline photo */
+@keyframes photo-border-spin {
+  to { transform: rotate(360deg); }
+}
+
+.hero-photo {
+  display: inline-flex;
+  position: relative;
+  width: 0.85em;
+  height: 0.85em;
+  border-radius: 14px;
+  overflow: hidden;
+  vertical-align: middle;
+  flex-shrink: 0;
+  box-shadow: 0 4px 20px rgba(0,0,0,.18);
+  z-index: 0;
+  transform: rotate(4deg);
+}
+
+.hero-photo::before {
+  content: '';
+  position: absolute;
+  inset: -3px;
+  border-radius: 17px;
+  background: conic-gradient(
+    from 0deg,
+    transparent 0deg 60deg,
+    var(--text) 60deg 180deg,
+    transparent 180deg 240deg,
+    var(--text) 240deg 360deg
+  );
+  animation: photo-border-spin 4s linear infinite;
+  z-index: -1;
+  opacity: 0.25;
+}
+
+.hero-photo svg,
+.hero-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 12px;
+  position: relative;
+  z-index: 1;
+}
+
+/* ── Description ─────────────────────────── */
+.hero-desc {
+  max-width: 480px;
+  color: var(--text-muted);
+  font-size: 1.05rem;
+  line-height: 1.75;
+  margin-bottom: 2.5rem;
+  animation: hero-enter 0.85s ease both 0.4s;
+}
+
+/* ── Scroll arrow ────────────────────────── */
+.hero-arrow {
+  display: inline-flex;
+  color: var(--text);
+  opacity: 0.4;
+  animation: hero-enter 0.85s ease both 0.6s, float-arrow 2.4s ease-in-out 1.2s infinite;
+  transition: opacity 0.2s;
+  text-decoration: none;
+}
+.hero-arrow:hover { opacity: 0.9; }

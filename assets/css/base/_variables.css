@@ -1,0 +1,30 @@
+/* ── Light theme (default) ──────────────────── */
+:root {
+  --bg:         #f5f4f1;
+  --bg-white:   #ffffff;
+  --bg-connect: #eceae5;
+  --text:       #111111;
+  --text-muted: #6b6860;
+  --border:     #e0ddd8;
+
+  --teal:  #2a9d8f;
+  --blue:  #4a72c4;
+  --rose:  #d4648a;
+  --olive: #7a8c44;
+
+  --radius:    18px;
+  --radius-sm: 10px;
+  --radius-xs: 6px;
+
+  --transition: 0.3s ease;
+}
+
+/* ── Dark theme ─────────────────────────────── */
+[data-theme="dark"] {
+  --bg:         #141414;
+  --bg-white:   #1e1e1e;
+  --bg-connect: #111111;
+  --text:       #f0eeea;
+  --text-muted: #888880;
+  --border:     #2e2e2e;
+}

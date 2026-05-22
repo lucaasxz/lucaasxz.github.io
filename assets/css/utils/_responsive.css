@@ -1,0 +1,19 @@
+@media (max-width: 900px) {
+  .projects-grid { grid-template-columns: 1fr; }
+  .about-layout  { grid-template-columns: 1fr; }
+  .about-photo   { max-width: 280px; margin: 0 auto; }
+}
+
+@media (max-width: 768px) {
+  .hero-title { font-size: clamp(2.4rem, 10vw, 4rem); }
+  .connect-title { font-size: clamp(2.8rem, 10vw, 5rem); }
+  .nav-links  { display: none; }
+  .hamburger  { display: flex; }
+  .skills-grid { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 480px) {
+  .skills-grid { grid-template-columns: 1fr; }
+  .connect-buttons { flex-direction: column; align-items: center; }
+  .footer-inner { flex-direction: column; gap: 0.75rem; text-align: center; }
+}

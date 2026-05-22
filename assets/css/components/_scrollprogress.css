@@ -1,0 +1,13 @@
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  width: 0%;
+  background: var(--text);
+  z-index: 200;
+  transition: width .08s linear;
+  opacity: 0.35;
+}
+
+[data-theme="dark"] .scroll-progress { opacity: 0.6; }
