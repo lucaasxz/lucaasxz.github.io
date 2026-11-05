@@ -226,3 +226,32 @@
   opacity: 0.8;
   transform: translateY(-1px);
 }
+
+/* Projetos corporativos: sem link, só a capa ilustrativa */
+.project-image--slate { background: linear-gradient(135deg, #5b6478, #363d4d); }
+.project-category--slate { color: var(--slate); }
+
+.project-card--private .project-image::after { content: none; }
+
+.project-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  list-style: none;
+  padding: 0;
+  margin: 0 0 0.85rem;
+}
+.project-stack li {
+  font-size: 0.74rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  border: 1px solid var(--border);
+  border-radius: 50px;
+  padding: 0.2rem 0.65rem;
+}
+
+.project-private-note {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  font-style: italic;
+}

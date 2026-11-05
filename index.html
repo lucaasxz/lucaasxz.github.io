@@ -6,21 +6,21 @@
   <title>Lucas Vinicius | Full Stack Developer</title>
 
   <!-- SEO -->
-  <meta name="description" content="Portfolio de Lucas Vinicius — Full Stack Developer que cria aplicações com Flutter, JavaScript e tecnologias web, unindo design, performance e experiência do usuário." />
+  <meta name="description" content="Portfolio de Lucas Vinicius — Full Stack Developer que cria sistemas web e apps com React, TypeScript, Node.js, PHP e Flutter, unindo design, performance e experiência do usuário." />
   <meta name="author" content="Lucas Vinicius" />
 
   <!-- Open Graph -->
   <meta property="og:type"        content="website" />
   <meta property="og:url"         content="https://lucasvinicius.dev.br/" />
   <meta property="og:title"       content="Lucas Vinicius | Full Stack Developer" />
-  <meta property="og:description" content="Full Stack Developer que cria aplicações com Flutter, JavaScript e tecnologias web, unindo design, performance e experiência do usuário." />
+  <meta property="og:description" content="Full Stack Developer que cria sistemas web e apps com React, TypeScript, Node.js, PHP e Flutter, unindo design, performance e experiência do usuário." />
   <meta property="og:image"       content="https://lucasvinicius.dev.br/assets/images/photo.jpeg" />
   <meta property="og:locale"      content="pt_BR" />
 
   <!-- Twitter Card -->
   <meta name="twitter:card"        content="summary_large_image" />
   <meta name="twitter:title"       content="Lucas Vinicius | Full Stack Developer" />
-  <meta name="twitter:description" content="Full Stack Developer que cria aplicações com Flutter, JavaScript e tecnologias web, unindo design, performance e experiência do usuário." />
+  <meta name="twitter:description" content="Full Stack Developer que cria sistemas web e apps com React, TypeScript, Node.js, PHP e Flutter, unindo design, performance e experiência do usuário." />
   <meta name="twitter:image"       content="https://lucasvinicius.dev.br/assets/images/photo.jpeg" />
 
   <!-- Favicon -->
@@ -130,6 +130,45 @@
           </div>
         </article>
 
+
+        <article class="project-card project-card--private" data-category="web">
+          <div class="project-image project-image--slate">
+            <img src="assets/images/visto.svg" alt="Ilustração do projeto Visto — Gestão de Terceiros com dados fictícios" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;" />
+          </div>
+          <div class="project-info">
+            <span class="project-category project-category--slate">SISTEMA WEB · COMPLIANCE</span>
+            <h3>Visto — Gestão de Terceiros</h3>
+            <p>Sistema que libera a entrada de trabalhadores de empresas terceiras na planta após a conferência da documentação. Tem portal próprio para a terceira enviar documentos, mesas de análise por setor, requisições com trilha de etapas, turmas de integração com presença assinada por QR Code e PDF com código de verificação, acervo com revisões e chat por setor. Privacidade desde o design (LGPD): retenção, expurgo e auditoria de acesso a dados de saúde.</p>
+            <ul class="project-stack" aria-label="Tecnologias"><li>React</li><li>TypeScript</li><li>Node.js</li><li>PostgreSQL</li><li>MFA/TOTP</li><li>pdf-lib</li><li>Vercel</li><li>Docker</li></ul>
+            <span class="project-private-note">Projeto corporativo · código privado · imagem ilustrativa</span>
+          </div>
+        </article>
+
+        <article class="project-card project-card--private" data-category="web">
+          <div class="project-image project-image--rose">
+            <img src="assets/images/indicadores.svg" alt="Ilustração do projeto Indicadores de RH com dados fictícios" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;" />
+          </div>
+          <div class="project-info">
+            <span class="project-category project-category--rose">PLATAFORMA DE INDICADORES · RH</span>
+            <h3>Indicadores de RH</h3>
+            <p>Plataforma de indicadores para as áreas de Recursos Humanos: dashboards mensais com metas, resumo executivo, plano de ação (Fato-Causa-Ação) e uma visão gerencial com modo apresentação para a reunião de resultados. Inclui módulo de People Analytics com organograma, matriz RACI e quadro de tarefas. Gráficos feitos à mão em SVG, sem biblioteca, auditoria de cada alteração e acesso por convite com autenticação em dois fatores.</p>
+            <ul class="project-stack" aria-label="Tecnologias"><li>React</li><li>TypeScript</li><li>Vite</li><li>Tailwind</li><li>PostgreSQL</li><li>Vitest</li><li>Vercel</li></ul>
+            <span class="project-private-note">Projeto corporativo · código privado · imagem ilustrativa</span>
+          </div>
+        </article>
+
+        <article class="project-card project-card--private" data-category="web">
+          <div class="project-image project-image--olive">
+            <img src="assets/images/corrida.svg" alt="Ilustração do projeto Inscrições da Corrida com dados fictícios" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;" />
+          </div>
+          <div class="project-info">
+            <span class="project-category project-category--olive">SISTEMA WEB · EVENTOS</span>
+            <h3>Inscrições da Corrida</h3>
+            <p>Sistema de inscrição para uma corrida corporativa: o participante informa a matrícula, escolhe a modalidade e acompanha a inscrição por link. A organização confere comprovantes, faz inscrições no balcão, controla vagas por turno com lista de espera e sorteio, e exporta relatórios. Backend em PHP puro com SQLite, controle de concorrência nas vagas, limite de requisições e testes de paridade entre as regras do servidor e da tela.</p>
+            <ul class="project-stack" aria-label="Tecnologias"><li>PHP</li><li>SQLite</li><li>Preact</li><li>Three.js</li><li>GitHub Actions</li></ul>
+            <span class="project-private-note">Projeto corporativo · código privado · imagem ilustrativa</span>
+          </div>
+        </article>
       </div>
     </div>
   </section>
@@ -143,25 +182,26 @@
           <h3>Frontend</h3>
           <div class="skill-tags">
             <span>HTML5</span><span>CSS3</span><span>JavaScript</span>
-            <span>React</span><span>Flutter</span>
+            <span>React</span><span>TypeScript</span><span>Tailwind</span>
+            <span>Preact</span><span>Flutter</span>
           </div>
         </div>
         <div class="skill-group">
           <h3>Backend</h3>
           <div class="skill-tags">
-            <span>Java</span><span>C++</span><span>C#</span><span>Dart</span><span>Python</span>
+            <span>Node.js</span><span>PHP</span><span>Java</span><span>C++</span><span>C#</span><span>Dart</span><span>Python</span>
           </div>
         </div>
         <div class="skill-group">
           <h3>Banco de Dados</h3>
           <div class="skill-tags">
-            <span>SQL</span><span>MySQL</span><span>SQLite</span><span>Firebase</span>
+            <span>SQL</span><span>PostgreSQL</span><span>MySQL</span><span>SQLite</span><span>Firebase</span>
           </div>
         </div>
         <div class="skill-group">
           <h3>DevOps</h3>
           <div class="skill-tags">
-            <span>Git</span>
+            <span>Git</span><span>GitHub Actions</span><span>Docker</span><span>Vercel</span>
           </div>
         </div>
       </div>
