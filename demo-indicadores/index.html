@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex" />
+    <meta name="description" content="Demonstração com dados fictícios de uma plataforma de indicadores de RH." />
+    <title>Indicadores de RH · Demonstração</title>
+    <script type="module" crossorigin src="./assets/index-C5e-C7VE.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-BnsM_wLQ.css">
+  </head>
+  <body>
+    <div id="root"></div>
+    <script>
+      (function () {
+        try {
+          var t = localStorage.getItem('indicadores-rh-demo.tema') || 'sistema';
+          if (t === 'sistema') {
+            t = matchMedia('(prefers-color-scheme: dark)').matches ? 'escuro' : 'claro';
+          }
+          document.documentElement.setAttribute('data-tema', t);
+        } catch (e) {
+          document.documentElement.setAttribute('data-tema', 'claro');
+        }
+      })();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="./favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Visto · Demonstração</title>
+    <script type="module" crossorigin src="./assets/index-CqrClzmk.js"></script>
+    <link rel="modulepreload" crossorigin href="./assets/rolldown-runtime-QTnfLwEv.js">
+    <link rel="modulepreload" crossorigin href="./assets/preload-helper-HclGiUj8.js">
+    <link rel="modulepreload" crossorigin href="./assets/buffer-BPVnBjck.js">
+    <link rel="modulepreload" crossorigin href="./assets/banco-DDRDlQAb.js">
+    <link rel="stylesheet" crossorigin href="./assets/index-_iysz6mS.css">
+  </head>
+  <body>
+    <div id="root"></div>
+    <!-- Tema antes da primeira pintura: sem isto, quem escolheu o modo escuro
+         vê um lampejo branco em cada carregamento, enquanto o bundle baixa.
+         Fica inline e minúsculo de propósito — um arquivo separado voltaria a
+         ser uma requisição na frente da pintura. A chave é a mesma de
+         src/lib/tema.ts. -->
+    <script>
+      (function () {
+        try {
+          var t = localStorage.getItem('visto.tema') || 'sistema';
+          if (t === 'sistema') {
+            t = matchMedia('(prefers-color-scheme: dark)').matches ? 'escuro' : 'claro';
+          }
+          document.documentElement.setAttribute('data-tema', t);
+        } catch (e) {
+          document.documentElement.setAttribute('data-tema', 'claro');
+        }
+      })();
+    </script>
+  </body>
+</html>

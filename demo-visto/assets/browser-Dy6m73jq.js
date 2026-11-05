@@ -1,0 +1,1 @@
+import{t as e}from"./browser-B_X_RtOd.js";export default e();

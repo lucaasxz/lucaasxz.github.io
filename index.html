@@ -36,7 +36,6 @@
 </head>
 <body>
 
-  <div class="custom-cursor" id="customCursor" aria-hidden="true"></div>
 
   <noscript>
     <div class="noscript-banner">Este site funciona melhor com JavaScript habilitado.</div>
@@ -133,40 +132,52 @@
 
         <article class="project-card project-card--private" data-category="web">
           <div class="project-image project-image--slate">
-            <img src="assets/images/visto.svg" alt="Ilustração do projeto Visto — Gestão de Terceiros com dados fictícios" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;" />
+            <img src="assets/images/visto.jpg" alt="Tela do sistema Visto — Gestão de Terceiros com dados fictícios" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;" />
           </div>
           <div class="project-info">
             <span class="project-category project-category--slate">SISTEMA WEB · COMPLIANCE</span>
             <h3>Visto — Gestão de Terceiros</h3>
             <p>Sistema que libera a entrada de trabalhadores de empresas terceiras na planta após a conferência da documentação. Tem portal próprio para a terceira enviar documentos, mesas de análise por setor, requisições com trilha de etapas, turmas de integração com presença assinada por QR Code e PDF com código de verificação, acervo com revisões e chat por setor. Privacidade desde o design (LGPD): retenção, expurgo e auditoria de acesso a dados de saúde.</p>
             <ul class="project-stack" aria-label="Tecnologias"><li>React</li><li>TypeScript</li><li>Node.js</li><li>PostgreSQL</li><li>MFA/TOTP</li><li>pdf-lib</li><li>Vercel</li><li>Docker</li></ul>
-            <span class="project-private-note">Projeto corporativo · código privado · imagem ilustrativa</span>
+            <div class="project-card-links">
+              <button class="project-text-link" data-demo-src="demo-visto/index.html" data-demo-type="web">Demo ao vivo ↗</button>
+              <a href="demo-visto/index.html" target="_blank" rel="noopener" class="project-text-link">Abrir em tela cheia ↗</a>
+            </div>
+            <span class="project-private-note">Projeto corporativo · código privado · demo com dados fictícios</span>
           </div>
         </article>
 
         <article class="project-card project-card--private" data-category="web">
           <div class="project-image project-image--rose">
-            <img src="assets/images/indicadores.svg" alt="Ilustração do projeto Indicadores de RH com dados fictícios" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;" />
+            <img src="assets/images/indicadores.jpg" alt="Tela do sistema Indicadores de RH com dados fictícios" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;" />
           </div>
           <div class="project-info">
             <span class="project-category project-category--rose">PLATAFORMA DE INDICADORES · RH</span>
             <h3>Indicadores de RH</h3>
             <p>Plataforma de indicadores para as áreas de Recursos Humanos: dashboards mensais com metas, resumo executivo, plano de ação (Fato-Causa-Ação) e uma visão gerencial com modo apresentação para a reunião de resultados. Inclui módulo de People Analytics com organograma, matriz RACI e quadro de tarefas. Gráficos feitos à mão em SVG, sem biblioteca, auditoria de cada alteração e acesso por convite com autenticação em dois fatores.</p>
             <ul class="project-stack" aria-label="Tecnologias"><li>React</li><li>TypeScript</li><li>Vite</li><li>Tailwind</li><li>PostgreSQL</li><li>Vitest</li><li>Vercel</li></ul>
-            <span class="project-private-note">Projeto corporativo · código privado · imagem ilustrativa</span>
+            <div class="project-card-links">
+              <button class="project-text-link" data-demo-src="demo-indicadores/index.html" data-demo-type="web">Demo ao vivo ↗</button>
+              <a href="demo-indicadores/index.html" target="_blank" rel="noopener" class="project-text-link">Abrir em tela cheia ↗</a>
+            </div>
+            <span class="project-private-note">Projeto corporativo · código privado · demo com dados fictícios</span>
           </div>
         </article>
 
         <article class="project-card project-card--private" data-category="web">
           <div class="project-image project-image--olive">
-            <img src="assets/images/corrida.svg" alt="Ilustração do projeto Inscrições da Corrida com dados fictícios" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;" />
+            <img src="assets/images/corrida.jpg" alt="Tela do sistema Inscrições da Corrida com dados fictícios" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;" />
           </div>
           <div class="project-info">
             <span class="project-category project-category--olive">SISTEMA WEB · EVENTOS</span>
             <h3>Inscrições da Corrida</h3>
             <p>Sistema de inscrição para uma corrida corporativa: o participante informa a matrícula, escolhe a modalidade e acompanha a inscrição por link. A organização confere comprovantes, faz inscrições no balcão, controla vagas por turno com lista de espera e sorteio, e exporta relatórios. Backend em PHP puro com SQLite, controle de concorrência nas vagas, limite de requisições e testes de paridade entre as regras do servidor e da tela.</p>
             <ul class="project-stack" aria-label="Tecnologias"><li>PHP</li><li>SQLite</li><li>Preact</li><li>Three.js</li><li>GitHub Actions</li></ul>
-            <span class="project-private-note">Projeto corporativo · código privado · imagem ilustrativa</span>
+            <div class="project-card-links">
+              <button class="project-text-link" data-demo-src="demo-corrida/index.html" data-demo-type="web">Demo ao vivo ↗</button>
+              <a href="demo-corrida/index.html" target="_blank" rel="noopener" class="project-text-link">Abrir em tela cheia ↗</a>
+            </div>
+            <span class="project-private-note">Projeto corporativo · código privado · demo com dados fictícios</span>
           </div>
         </article>
       </div>
@@ -201,7 +212,9 @@
         <div class="skill-group">
           <h3>DevOps</h3>
           <div class="skill-tags">
-            <span>Git</span><span>GitHub Actions</span><span>Docker</span><span>Vercel</span>
+            <span>Git</span><span>GitHub Actions</span><span>CI/CD</span>
+            <span>Azure</span><span>Azure DevOps</span>
+            <span>Docker</span><span>Kubernetes</span><span>Vercel</span>
           </div>
         </div>
       </div>
@@ -218,7 +231,7 @@
             Comecei a codar por influência do meu irmão — vendo ele nesse mundo, fui criando curiosidade para entender como jogos, aplicativos e sites funcionavam por trás das telas. O que começou como admiração rapidamente virou interesse, e hoje se transformou em algo que quero levar para a vida.
           </p>
           <p>
-            Atualmente desenvolvo projetos utilizando Flutter, JavaScript e tecnologias web, criando aplicações, sistemas e experiências digitais que unem funcionalidade e design. Gosto da sensação de transformar uma ideia em algo real, funcionando de verdade e podendo ser usado por outras pessoas.
+            Atualmente trabalho principalmente com Node.js e TypeScript, desenvolvendo sistemas web completos — do banco de dados à interface — e cuidando também do provisionamento de ambientes na nuvem Azure, com pipelines de CI/CD no Azure DevOps e containers com Docker e Kubernetes. Gosto da sensação de transformar uma ideia em algo real, funcionando de verdade e podendo ser usado por outras pessoas.
           </p>
           <p>
             Além da programação, também me interesso por design, interfaces e criação visual, porque acredito que um bom projeto vai além do código: ele precisa transmitir identidade e causar impacto. Estou sempre buscando aprender, evoluir e criar projetos cada vez mais profissionais, transformando criatividade e tecnologia em algo que realmente faça diferença.

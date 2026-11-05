@@ -1,0 +1,2416 @@
+/* -----------------------------------------------------------------------------
+   corrida.css — o CSS das telas. Gerado UMA última vez a partir do Tailwind
+   e agora é CSS comum: edita-se à mão.
+
+   As cores são tokens (triplas RGB em :root, logo abaixo): cor nova entra como
+   token e é usada por rgb(var(--x)). UMA identidade só, a do cartaz do evento
+   (verde/limão), na página e na mesa.
+   Classe que não existe aqui não tem efeito: ao usar uma nova nas telas
+   (js/), escreva a regra no fim deste arquivo.
+   -------------------------------------------------------------------------- */
+*, ::before, ::after {
+  --tw-border-spacing-x: 0;
+  --tw-border-spacing-y: 0;
+  --tw-translate-x: 0;
+  --tw-translate-y: 0;
+  --tw-rotate: 0;
+  --tw-skew-x: 0;
+  --tw-skew-y: 0;
+  --tw-scale-x: 1;
+  --tw-scale-y: 1;
+  --tw-pan-x:  ;
+  --tw-pan-y:  ;
+  --tw-pinch-zoom:  ;
+  --tw-scroll-snap-strictness: proximity;
+  --tw-gradient-from-position:  ;
+  --tw-gradient-via-position:  ;
+  --tw-gradient-to-position:  ;
+  --tw-ordinal:  ;
+  --tw-slashed-zero:  ;
+  --tw-numeric-figure:  ;
+  --tw-numeric-spacing:  ;
+  --tw-numeric-fraction:  ;
+  --tw-ring-inset:  ;
+  --tw-ring-offset-width: 0px;
+  --tw-ring-offset-color: #fff;
+  --tw-ring-color: rgb(59 130 246 / 0.5);
+  --tw-ring-offset-shadow: 0 0 #0000;
+  --tw-ring-shadow: 0 0 #0000;
+  --tw-shadow: 0 0 #0000;
+  --tw-shadow-colored: 0 0 #0000;
+  --tw-blur:  ;
+  --tw-brightness:  ;
+  --tw-contrast:  ;
+  --tw-grayscale:  ;
+  --tw-hue-rotate:  ;
+  --tw-invert:  ;
+  --tw-saturate:  ;
+  --tw-sepia:  ;
+  --tw-drop-shadow:  ;
+  --tw-backdrop-blur:  ;
+  --tw-backdrop-brightness:  ;
+  --tw-backdrop-contrast:  ;
+  --tw-backdrop-grayscale:  ;
+  --tw-backdrop-hue-rotate:  ;
+  --tw-backdrop-invert:  ;
+  --tw-backdrop-opacity:  ;
+  --tw-backdrop-saturate:  ;
+  --tw-backdrop-sepia:  ;
+  --tw-contain-size:  ;
+  --tw-contain-layout:  ;
+  --tw-contain-paint:  ;
+  --tw-contain-style:  ;
+}
+
+::backdrop {
+  --tw-border-spacing-x: 0;
+  --tw-border-spacing-y: 0;
+  --tw-translate-x: 0;
+  --tw-translate-y: 0;
+  --tw-rotate: 0;
+  --tw-skew-x: 0;
+  --tw-skew-y: 0;
+  --tw-scale-x: 1;
+  --tw-scale-y: 1;
+  --tw-pan-x:  ;
+  --tw-pan-y:  ;
+  --tw-pinch-zoom:  ;
+  --tw-scroll-snap-strictness: proximity;
+  --tw-gradient-from-position:  ;
+  --tw-gradient-via-position:  ;
+  --tw-gradient-to-position:  ;
+  --tw-ordinal:  ;
+  --tw-slashed-zero:  ;
+  --tw-numeric-figure:  ;
+  --tw-numeric-spacing:  ;
+  --tw-numeric-fraction:  ;
+  --tw-ring-inset:  ;
+  --tw-ring-offset-width: 0px;
+  --tw-ring-offset-color: #fff;
+  --tw-ring-color: rgb(59 130 246 / 0.5);
+  --tw-ring-offset-shadow: 0 0 #0000;
+  --tw-ring-shadow: 0 0 #0000;
+  --tw-shadow: 0 0 #0000;
+  --tw-shadow-colored: 0 0 #0000;
+  --tw-blur:  ;
+  --tw-brightness:  ;
+  --tw-contrast:  ;
+  --tw-grayscale:  ;
+  --tw-hue-rotate:  ;
+  --tw-invert:  ;
+  --tw-saturate:  ;
+  --tw-sepia:  ;
+  --tw-drop-shadow:  ;
+  --tw-backdrop-blur:  ;
+  --tw-backdrop-brightness:  ;
+  --tw-backdrop-contrast:  ;
+  --tw-backdrop-grayscale:  ;
+  --tw-backdrop-hue-rotate:  ;
+  --tw-backdrop-invert:  ;
+  --tw-backdrop-opacity:  ;
+  --tw-backdrop-saturate:  ;
+  --tw-backdrop-sepia:  ;
+  --tw-contain-size:  ;
+  --tw-contain-layout:  ;
+  --tw-contain-paint:  ;
+  --tw-contain-style:  ;
+}
+
+/*
+! tailwindcss v3.4.19 | MIT License | https://tailwindcss.com
+*/
+
+/*
+1. Prevent padding and border from affecting element width. (https://github.com/mozdevs/cssremedy/issues/4)
+2. Allow adding a border to an element by just adding a border-width. (https://github.com/tailwindcss/tailwindcss/pull/116)
+*/
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  /* 1 */
+  border-width: 0;
+  /* 2 */
+  border-style: solid;
+  /* 2 */
+  border-color: #e5e7eb;
+  /* 2 */
+}
+
+::before,
+::after {
+  --tw-content: '';
+}
+
+/*
+1. Use a consistent sensible line-height in all browsers.
+2. Prevent adjustments of font size after orientation changes in iOS.
+3. Use a more readable tab size.
+4. Use the user's configured `sans` font-family by default.
+5. Use the user's configured `sans` font-feature-settings by default.
+6. Use the user's configured `sans` font-variation-settings by default.
+7. Disable tap highlights on iOS
+*/
+
+html,
+:host {
+  line-height: 1.5;
+  /* 1 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+  -moz-tab-size: 4;
+  /* 3 */
+  -o-tab-size: 4;
+     tab-size: 4;
+  /* 3 */
+  font-family: Barlow, Inter, system-ui, sans-serif;
+  /* 4 */
+  font-feature-settings: normal;
+  /* 5 */
+  font-variation-settings: normal;
+  /* 6 */
+  -webkit-tap-highlight-color: transparent;
+  /* 7 */
+}
+
+/*
+1. Remove the margin in all browsers.
+2. Inherit line-height from `html` so users can set them as a class directly on the `html` element.
+*/
+
+body {
+  margin: 0;
+  /* 1 */
+  line-height: inherit;
+  /* 2 */
+}
+
+/*
+1. Add the correct height in Firefox.
+2. Correct the inheritance of border color in Firefox. (https://bugzilla.mozilla.org/show_bug.cgi?id=190655)
+3. Ensure horizontal rules are visible by default.
+*/
+
+hr {
+  height: 0;
+  /* 1 */
+  color: inherit;
+  /* 2 */
+  border-top-width: 1px;
+  /* 3 */
+}
+
+/*
+Add the correct text decoration in Chrome, Edge, and Safari.
+*/
+
+abbr:where([title]) {
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
+}
+
+/*
+Remove the default font size and weight for headings.
+*/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+/*
+Reset links to optimize for opt-in styling instead of opt-out.
+*/
+
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+/*
+Add the correct font weight in Edge and Safari.
+*/
+
+b,
+strong {
+  font-weight: bolder;
+}
+
+/*
+1. Use the user's configured `mono` font-family by default.
+2. Use the user's configured `mono` font-feature-settings by default.
+3. Use the user's configured `mono` font-variation-settings by default.
+4. Correct the odd `em` font sizing in all browsers.
+*/
+
+code,
+kbd,
+samp,
+pre {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  /* 1 */
+  font-feature-settings: normal;
+  /* 2 */
+  font-variation-settings: normal;
+  /* 3 */
+  font-size: 1em;
+  /* 4 */
+}
+
+/*
+Add the correct font size in all browsers.
+*/
+
+small {
+  font-size: 80%;
+}
+
+/*
+Prevent `sub` and `sup` elements from affecting the line height in all browsers.
+*/
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/*
+1. Remove text indentation from table contents in Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=999088, https://bugs.webkit.org/show_bug.cgi?id=201297)
+2. Correct table border color inheritance in all Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=935729, https://bugs.webkit.org/show_bug.cgi?id=195016)
+3. Remove gaps between table borders by default.
+*/
+
+table {
+  text-indent: 0;
+  /* 1 */
+  border-color: inherit;
+  /* 2 */
+  border-collapse: collapse;
+  /* 3 */
+}
+
+/*
+1. Change the font styles in all browsers.
+2. Remove the margin in Firefox and Safari.
+3. Remove default padding in all browsers.
+*/
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+  /* 1 */
+  font-feature-settings: inherit;
+  /* 1 */
+  font-variation-settings: inherit;
+  /* 1 */
+  font-size: 100%;
+  /* 1 */
+  font-weight: inherit;
+  /* 1 */
+  line-height: inherit;
+  /* 1 */
+  letter-spacing: inherit;
+  /* 1 */
+  color: inherit;
+  /* 1 */
+  margin: 0;
+  /* 2 */
+  padding: 0;
+  /* 3 */
+}
+
+/*
+Remove the inheritance of text transform in Edge and Firefox.
+*/
+
+button,
+select {
+  text-transform: none;
+}
+
+/*
+1. Correct the inability to style clickable types in iOS and Safari.
+2. Remove default button styles.
+*/
+
+button,
+input:where([type='button']),
+input:where([type='reset']),
+input:where([type='submit']) {
+  -webkit-appearance: button;
+  /* 1 */
+  background-color: transparent;
+  /* 2 */
+  background-image: none;
+  /* 2 */
+}
+
+/*
+Use the modern Firefox focus style for all focusable elements.
+*/
+
+:-moz-focusring {
+  outline: auto;
+}
+
+/*
+Remove the additional `:invalid` styles in Firefox. (https://github.com/mozilla/gecko-dev/blob/2f9eacd9d3d995c937b4251a5557d95d494c9be1/layout/style/res/forms.css#L728-L737)
+*/
+
+:-moz-ui-invalid {
+  box-shadow: none;
+}
+
+/*
+Add the correct vertical alignment in Chrome and Firefox.
+*/
+
+progress {
+  vertical-align: baseline;
+}
+
+/*
+Correct the cursor style of increment and decrement buttons in Safari.
+*/
+
+::-webkit-inner-spin-button,
+::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/*
+1. Correct the odd appearance in Chrome and Safari.
+2. Correct the outline style in Safari.
+*/
+
+[type='search'] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  outline-offset: -2px;
+  /* 2 */
+}
+
+/*
+Remove the inner padding in Chrome and Safari on macOS.
+*/
+
+::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/*
+1. Correct the inability to style clickable types in iOS and Safari.
+2. Change font properties to `inherit` in Safari.
+*/
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+}
+
+/*
+Add the correct display in Chrome and Safari.
+*/
+
+summary {
+  display: list-item;
+}
+
+/*
+Removes the default spacing and border for appropriate elements.
+*/
+
+blockquote,
+dl,
+dd,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+figure,
+p,
+pre {
+  margin: 0;
+}
+
+fieldset {
+  margin: 0;
+  padding: 0;
+}
+
+legend {
+  padding: 0;
+}
+
+ol,
+ul,
+menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+Reset default styling for dialogs.
+*/
+
+dialog {
+  padding: 0;
+}
+
+/*
+Prevent resizing textareas horizontally by default.
+*/
+
+textarea {
+  resize: vertical;
+}
+
+/*
+1. Reset the default placeholder opacity in Firefox. (https://github.com/tailwindlabs/tailwindcss/issues/3300)
+2. Set the default placeholder color to the user's configured gray 400 color.
+*/
+
+input::-moz-placeholder, textarea::-moz-placeholder {
+  opacity: 1;
+  /* 1 */
+  color: #9ca3af;
+  /* 2 */
+}
+
+input::placeholder,
+textarea::placeholder {
+  opacity: 1;
+  /* 1 */
+  color: #9ca3af;
+  /* 2 */
+}
+
+/*
+Set the default cursor for buttons.
+*/
+
+button,
+[role="button"] {
+  cursor: pointer;
+}
+
+/*
+Make sure disabled buttons don't get the pointer cursor.
+*/
+
+:disabled {
+  cursor: default;
+}
+
+/*
+1. Make replaced elements `display: block` by default. (https://github.com/mozdevs/cssremedy/issues/14)
+2. Add `vertical-align: middle` to align replaced elements more sensibly by default. (https://github.com/jensimmons/cssremedy/issues/14#issuecomment-634934210)
+   This can trigger a poorly considered lint error in some tools but is included by design.
+*/
+
+img,
+svg,
+video,
+canvas,
+audio,
+iframe,
+embed,
+object {
+  display: block;
+  /* 1 */
+  vertical-align: middle;
+  /* 2 */
+}
+
+/*
+Constrain images and videos to the parent width and preserve their intrinsic aspect ratio. (https://github.com/mozdevs/cssremedy/issues/14)
+*/
+
+img,
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Make elements with the HTML hidden attribute stay hidden by default */
+
+[hidden]:where(:not([hidden="until-found"])) {
+  display: none;
+}
+
+html,
+  body {
+  --tw-bg-opacity: 1;
+  background-color: rgb(var(--fundo) / var(--tw-bg-opacity, 1));
+  --tw-text-opacity: 1;
+  color: rgb(var(--texto) / var(--tw-text-opacity, 1));
+}
+
+body {
+  font-family: Barlow, Inter, system-ui, sans-serif;
+  font-weight: 500;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+:focus-visible {
+  outline: 3px solid rgb(var(--selecao));
+  outline-offset: 2px;
+}
+
+/* As raias da pista (direção B): linhas verticais sutis atrás do conteúdo. */
+
+.fundo-raias {
+  background:
+      repeating-linear-gradient(90deg, transparent 0 77px, rgb(var(--trilho)) 77px 78px),
+      rgb(var(--fundo));
+}
+
+/* O número da raia: contorno limão, sem preenchimento. */
+
+.numero-raia {
+  color: transparent;
+  -webkit-text-stroke: 1.5px rgb(var(--destaque));
+}
+
+/* A pista tracejada do progresso. */
+
+.pista-tracejada {
+  background: repeating-linear-gradient(90deg, rgb(var(--trilho)) 0 14px, transparent 14px 20px);
+}
+
+.raia-esgotada {
+  background: repeating-linear-gradient(135deg, transparent 0 8px, rgb(var(--esgotado)) 8px 16px);
+}
+
+/* A linha de chegada quadriculada (o fim de cada raia e do progresso). */
+
+.linha-chegada {
+  background: conic-gradient(rgb(var(--texto)) 25%, transparent 0 50%, rgb(var(--texto)) 0 75%, transparent 0) 0 0 / 10px 10px;
+}
+
+/* O que está em andamento na raia (conferência ou reserva): lima hachurado. */
+
+.faixa-andamento {
+  background: repeating-linear-gradient(-45deg, rgb(var(--destaque)) 0 5px, rgb(var(--destaque) / 0.35) 5px 10px);
+}
+
+/* As vagas livres: a pista tracejada. */
+
+.trilho-livre {
+  background: repeating-linear-gradient(90deg, rgb(var(--trilho)) 0 12px, transparent 12px 18px);
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+.pointer-events-none {
+  pointer-events: none;
+}
+
+.visible {
+  visibility: visible;
+}
+
+.fixed {
+  position: fixed;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.relative {
+  position: relative;
+}
+
+.inset-0 {
+  inset: 0px;
+}
+
+.inset-x-0 {
+  left: 0px;
+  right: 0px;
+}
+
+.inset-y-0 {
+  top: 0px;
+  bottom: 0px;
+}
+
+.-bottom-1\.5 {
+  bottom: -0.375rem;
+}
+
+.-right-0\.5 {
+  right: -0.125rem;
+}
+
+.-right-5 {
+  right: -1.25rem;
+}
+
+.-right-8 {
+  right: -2rem;
+}
+
+.-right-\[9px\] {
+  right: -9px;
+}
+
+.-top-1\.5 {
+  top: -0.375rem;
+}
+
+.-top-2 {
+  top: -0.5rem;
+}
+
+.-top-4 {
+  top: -1rem;
+}
+
+.bottom-0 {
+  bottom: 0px;
+}
+
+.left-0 {
+  left: 0px;
+}
+
+.left-\[8\%\] {
+  left: 8%;
+}
+
+.right-0 {
+  right: 0px;
+}
+
+.right-\[8\%\] {
+  right: 8%;
+}
+
+.top-1\/2 {
+  top: 50%;
+}
+
+.top-\[9px\] {
+  top: 9px;
+}
+
+.z-50 {
+  z-index: 50;
+}
+
+.order-3 {
+  order: 3;
+}
+
+.col-span-2 {
+  grid-column: span 2 / span 2;
+}
+
+.col-span-4 {
+  grid-column: span 4 / span 4;
+}
+
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.mb-2 {
+  margin-bottom: 0.5rem;
+}
+
+.mb-3 {
+  margin-bottom: 0.75rem;
+}
+
+.ml-auto {
+  margin-left: auto;
+}
+
+.mt-0\.5 {
+  margin-top: 0.125rem;
+}
+
+.mt-1 {
+  margin-top: 0.25rem;
+}
+
+.mt-1\.5 {
+  margin-top: 0.375rem;
+}
+
+.mt-2 {
+  margin-top: 0.5rem;
+}
+
+.mt-3 {
+  margin-top: 0.75rem;
+}
+
+.mt-4 {
+  margin-top: 1rem;
+}
+
+.mt-5 {
+  margin-top: 1.25rem;
+}
+
+.mt-6 {
+  margin-top: 1.5rem;
+}
+
+.block {
+  display: block;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+.flex {
+  display: flex;
+}
+
+.inline-flex {
+  display: inline-flex;
+}
+
+.table {
+  display: table;
+}
+
+.grid {
+  display: grid;
+}
+
+.inline-grid {
+  display: inline-grid;
+}
+
+.hidden {
+  display: none;
+}
+
+.h-0\.5 {
+  height: 0.125rem;
+}
+
+.h-11 {
+  height: 2.75rem;
+}
+
+.h-12 {
+  height: 3rem;
+}
+
+.h-2\.5 {
+  height: 0.625rem;
+}
+
+.h-3 {
+  height: 0.75rem;
+}
+
+.h-4 {
+  height: 1rem;
+}
+
+.h-5 {
+  height: 1.25rem;
+}
+
+.h-6 {
+  height: 1.5rem;
+}
+
+.h-\[140px\] {
+  height: 140px;
+}
+
+.h-\[220px\] {
+  height: 220px;
+}
+
+.h-\[22px\] {
+  height: 22px;
+}
+
+.h-\[52\%\] {
+  height: 52%;
+}
+
+.h-\[70vh\] {
+  height: 70vh;
+}
+
+.h-auto {
+  height: auto;
+}
+
+.h-full {
+  height: 100%;
+}
+
+.max-h-\[70vh\] {
+  max-height: 70vh;
+}
+
+.min-h-11 {
+  min-height: 2.75rem;
+}
+
+.min-h-12 {
+  min-height: 3rem;
+}
+
+.min-h-16 {
+  min-height: 4rem;
+}
+
+.min-h-20 {
+  min-height: 5rem;
+}
+
+.min-h-\[1\.4em\] {
+  min-height: 1.4em;
+}
+
+.min-h-\[52px\] {
+  min-height: 52px;
+}
+
+.min-h-\[54px\] {
+  min-height: 54px;
+}
+
+.min-h-\[72px\] {
+  min-height: 72px;
+}
+
+.min-h-screen {
+  min-height: 100vh;
+}
+
+.w-11 {
+  width: 2.75rem;
+}
+
+.w-12 {
+  width: 3rem;
+}
+
+.w-16 {
+  width: 4rem;
+}
+
+.w-2\.5 {
+  width: 0.625rem;
+}
+
+.w-3 {
+  width: 0.75rem;
+}
+
+.w-4 {
+  width: 1rem;
+}
+
+.w-5 {
+  width: 1.25rem;
+}
+
+.w-6 {
+  width: 1.5rem;
+}
+
+.w-7 {
+  width: 1.75rem;
+}
+
+.w-9 {
+  width: 2.25rem;
+}
+
+.w-\[118px\] {
+  width: 118px;
+}
+
+.w-\[170px\] {
+  width: 170px;
+}
+
+.w-\[180px\] {
+  width: 180px;
+}
+
+.w-\[190px\] {
+  width: 190px;
+}
+
+.w-\[210px\] {
+  width: 210px;
+}
+
+.w-\[22px\] {
+  width: 22px;
+}
+
+.w-\[270px\] {
+  width: 270px;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.min-w-0 {
+  min-width: 0px;
+}
+
+.min-w-12 {
+  min-width: 3rem;
+}
+
+.min-w-8 {
+  min-width: 2rem;
+}
+
+.min-w-\[56rem\] {
+  min-width: 56rem;
+}
+
+.max-w-\[1080px\] {
+  max-width: 1080px;
+}
+
+.max-w-\[340px\] {
+  max-width: 340px;
+}
+
+.max-w-\[420px\] {
+  max-width: 420px;
+}
+
+.max-w-\[46ch\] {
+  max-width: 46ch;
+}
+
+.max-w-\[560px\] {
+  max-width: 560px;
+}
+
+.flex-1 {
+  flex: 1 1 0%;
+}
+
+.flex-none {
+  flex: none;
+}
+
+.basis-56 {
+  flex-basis: 14rem;
+}
+
+.-translate-y-1\/2 {
+  --tw-translate-y: -50%;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.-skew-x-6 {
+  --tw-skew-x: -6deg;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.skew-x-6 {
+  --tw-skew-x: 6deg;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.scroll-mt-4 {
+  scroll-margin-top: 1rem;
+}
+
+.grid-cols-2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.grid-cols-5 {
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+}
+
+.grid-cols-6 {
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+}
+
+.grid-cols-\[34px_minmax\(0\2c 1fr\)_auto\] {
+  grid-template-columns: 34px minmax(0,1fr) auto;
+}
+
+.grid-cols-\[34px_minmax\(0\2c 1fr\)_auto_auto\] {
+  grid-template-columns: 34px minmax(0,1fr) auto auto;
+}
+
+.grid-cols-\[9rem_1fr\] {
+  grid-template-columns: 9rem 1fr;
+}
+
+.grid-cols-\[auto_minmax\(0\2c 1fr\)_auto\] {
+  grid-template-columns: auto minmax(0,1fr) auto;
+}
+
+.grid-cols-\[minmax\(0\2c 1fr\)_auto\] {
+  grid-template-columns: minmax(0,1fr) auto;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.place-items-center {
+  place-items: center;
+}
+
+.content-center {
+  align-content: center;
+}
+
+.content-start {
+  align-content: flex-start;
+}
+
+.items-start {
+  align-items: flex-start;
+}
+
+.items-end {
+  align-items: flex-end;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.items-baseline {
+  align-items: baseline;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.justify-items-end {
+  justify-items: end;
+}
+
+.justify-items-center {
+  justify-items: center;
+}
+
+.gap-0\.5 {
+  gap: 0.125rem;
+}
+
+.gap-1 {
+  gap: 0.25rem;
+}
+
+.gap-1\.5 {
+  gap: 0.375rem;
+}
+
+.gap-10 {
+  gap: 2.5rem;
+}
+
+.gap-2 {
+  gap: 0.5rem;
+}
+
+.gap-2\.5 {
+  gap: 0.625rem;
+}
+
+.gap-3 {
+  gap: 0.75rem;
+}
+
+.gap-4 {
+  gap: 1rem;
+}
+
+.gap-5 {
+  gap: 1.25rem;
+}
+
+.gap-6 {
+  gap: 1.5rem;
+}
+
+.gap-x-3 {
+  -moz-column-gap: 0.75rem;
+       column-gap: 0.75rem;
+}
+
+.gap-x-4 {
+  -moz-column-gap: 1rem;
+       column-gap: 1rem;
+}
+
+.gap-x-6 {
+  -moz-column-gap: 1.5rem;
+       column-gap: 1.5rem;
+}
+
+.gap-y-1 {
+  row-gap: 0.25rem;
+}
+
+.gap-y-2 {
+  row-gap: 0.5rem;
+}
+
+.justify-self-start {
+  justify-self: start;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.overflow-x-auto {
+  overflow-x: auto;
+}
+
+.overflow-y-auto {
+  overflow-y: auto;
+}
+
+.truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.whitespace-nowrap {
+  white-space: nowrap;
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+.break-all {
+  word-break: break-all;
+}
+
+.rounded-2xl {
+  border-radius: 1rem;
+}
+
+.rounded-\[10px\] {
+  border-radius: 10px;
+}
+
+.rounded-\[14px\] {
+  border-radius: 14px;
+}
+
+.rounded-\[18px\] {
+  border-radius: 18px;
+}
+
+.rounded-\[22px\] {
+  border-radius: 22px;
+}
+
+.rounded-full {
+  border-radius: 9999px;
+}
+
+.rounded-lg {
+  border-radius: 0.5rem;
+}
+
+.rounded-md {
+  border-radius: 0.375rem;
+}
+
+.rounded-sm {
+  border-radius: 0.125rem;
+}
+
+.rounded-xl {
+  border-radius: 0.75rem;
+}
+
+.border {
+  border-width: 1px;
+}
+
+.border-2 {
+  border-width: 2px;
+}
+
+.border-b {
+  border-bottom-width: 1px;
+}
+
+.border-b-2 {
+  border-bottom-width: 2px;
+}
+
+.border-l-4 {
+  border-left-width: 4px;
+}
+
+.border-t {
+  border-top-width: 1px;
+}
+
+.border-t-2 {
+  border-top-width: 2px;
+}
+
+.border-dashed {
+  border-style: dashed;
+}
+
+.border-alerta {
+  --tw-border-opacity: 1;
+  border-color: rgb(var(--alerta) / var(--tw-border-opacity, 1));
+}
+
+.border-aviso {
+  --tw-border-opacity: 1;
+  border-color: rgb(var(--aviso) / var(--tw-border-opacity, 1));
+}
+
+.border-borda {
+  --tw-border-opacity: 1;
+  border-color: rgb(var(--borda) / var(--tw-border-opacity, 1));
+}
+
+.border-borda\/30 {
+  border-color: rgb(var(--borda) / 0.3);
+}
+
+.border-borda\/40 {
+  border-color: rgb(var(--borda) / 0.4);
+}
+
+.border-borda\/60 {
+  border-color: rgb(var(--borda) / 0.6);
+}
+
+.border-cta {
+  --tw-border-opacity: 1;
+  border-color: rgb(var(--cta) / var(--tw-border-opacity, 1));
+}
+
+.border-destaque {
+  --tw-border-opacity: 1;
+  border-color: rgb(var(--destaque) / var(--tw-border-opacity, 1));
+}
+
+.border-faixa {
+  --tw-border-opacity: 1;
+  border-color: rgb(var(--faixa) / var(--tw-border-opacity, 1));
+}
+
+.border-perigo {
+  --tw-border-opacity: 1;
+  border-color: rgb(var(--perigo) / var(--tw-border-opacity, 1));
+}
+
+.border-sucesso {
+  --tw-border-opacity: 1;
+  border-color: rgb(var(--sucesso) / var(--tw-border-opacity, 1));
+}
+
+.border-texto-suave {
+  --tw-border-opacity: 1;
+  border-color: rgb(var(--texto-suave) / var(--tw-border-opacity, 1));
+}
+
+.border-trilho {
+  --tw-border-opacity: 1;
+  border-color: rgb(var(--trilho) / var(--tw-border-opacity, 1));
+}
+
+.bg-alerta {
+  --tw-bg-opacity: 1;
+  background-color: rgb(var(--alerta) / var(--tw-bg-opacity, 1));
+}
+
+.bg-barra {
+  --tw-bg-opacity: 1;
+  background-color: rgb(var(--barra) / var(--tw-bg-opacity, 1));
+}
+
+.bg-cta {
+  --tw-bg-opacity: 1;
+  background-color: rgb(var(--cta) / var(--tw-bg-opacity, 1));
+}
+
+.bg-destaque {
+  --tw-bg-opacity: 1;
+  background-color: rgb(var(--destaque) / var(--tw-bg-opacity, 1));
+}
+
+.bg-faixa {
+  --tw-bg-opacity: 1;
+  background-color: rgb(var(--faixa) / var(--tw-bg-opacity, 1));
+}
+
+.bg-fundo {
+  --tw-bg-opacity: 1;
+  background-color: rgb(var(--fundo) / var(--tw-bg-opacity, 1));
+}
+
+.bg-papel {
+  --tw-bg-opacity: 1;
+  background-color: rgb(var(--papel) / var(--tw-bg-opacity, 1));
+}
+
+.bg-perigo {
+  --tw-bg-opacity: 1;
+  background-color: rgb(var(--perigo) / var(--tw-bg-opacity, 1));
+}
+
+.bg-superficie {
+  --tw-bg-opacity: 1;
+  background-color: rgb(var(--superficie) / var(--tw-bg-opacity, 1));
+}
+
+.bg-superficie-2 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(var(--superficie-2) / var(--tw-bg-opacity, 1));
+}
+
+.bg-transparent {
+  background-color: transparent;
+}
+
+.bg-trilho {
+  --tw-bg-opacity: 1;
+  background-color: rgb(var(--trilho) / var(--tw-bg-opacity, 1));
+}
+
+.fill-papel {
+  fill: rgb(var(--papel) / 1);
+}
+
+.fill-papel-texto {
+  fill: rgb(var(--papel-texto) / 1);
+}
+
+.object-contain {
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.p-2 {
+  padding: 0.5rem;
+}
+
+.p-3 {
+  padding: 0.75rem;
+}
+
+.p-4 {
+  padding: 1rem;
+}
+
+.p-5 {
+  padding: 1.25rem;
+}
+
+.p-6 {
+  padding: 1.5rem;
+}
+
+.px-1 {
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
+}
+
+.px-2 {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+.px-3 {
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+}
+
+.px-3\.5 {
+  padding-left: 0.875rem;
+  padding-right: 0.875rem;
+}
+
+.px-4 {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.px-5 {
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
+
+.px-6 {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.py-0\.5 {
+  padding-top: 0.125rem;
+  padding-bottom: 0.125rem;
+}
+
+.py-1 {
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+}
+
+.py-1\.5 {
+  padding-top: 0.375rem;
+  padding-bottom: 0.375rem;
+}
+
+.py-10 {
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+}
+
+.py-2 {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.py-2\.5 {
+  padding-top: 0.625rem;
+  padding-bottom: 0.625rem;
+}
+
+.py-3 {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+
+.py-4 {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.py-5 {
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+}
+
+.py-8 {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.pb-10 {
+  padding-bottom: 2.5rem;
+}
+
+.pb-2 {
+  padding-bottom: 0.5rem;
+}
+
+.pl-3 {
+  padding-left: 0.75rem;
+}
+
+.pt-10 {
+  padding-top: 2.5rem;
+}
+
+.pt-14 {
+  padding-top: 3.5rem;
+}
+
+.pt-16 {
+  padding-top: 4rem;
+}
+
+.pt-4 {
+  padding-top: 1rem;
+}
+
+.pt-6 {
+  padding-top: 1.5rem;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.font-display {
+  font-family: "Barlow Condensed", Barlow, "Arial Narrow", sans-serif;
+}
+
+.font-sans {
+  font-family: Barlow, Inter, system-ui, sans-serif;
+}
+
+.text-2xl {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+.text-3xl {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+}
+
+.text-4xl {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+}
+
+.text-\[11px\] {
+  font-size: 11px;
+}
+
+.text-\[13px\] {
+  font-size: 13px;
+}
+
+.text-\[15px\] {
+  font-size: 15px;
+}
+
+.text-\[21px\] {
+  font-size: 21px;
+}
+
+.text-\[22px\] {
+  font-size: 22px;
+}
+
+.text-\[24px\] {
+  font-size: 24px;
+}
+
+.text-\[26px\] {
+  font-size: 26px;
+}
+
+.text-\[28px\] {
+  font-size: 28px;
+}
+
+.text-\[30px\] {
+  font-size: 30px;
+}
+
+.text-\[34px\] {
+  font-size: 34px;
+}
+
+.text-\[38px\] {
+  font-size: 38px;
+}
+
+.text-\[40px\] {
+  font-size: 40px;
+}
+
+.text-\[42px\] {
+  font-size: 42px;
+}
+
+.text-\[44px\] {
+  font-size: 44px;
+}
+
+.text-\[46px\] {
+  font-size: 46px;
+}
+
+.text-\[48px\] {
+  font-size: 48px;
+}
+
+.text-\[64px\] {
+  font-size: 64px;
+}
+
+.text-\[92px\] {
+  font-size: 92px;
+}
+
+.text-base {
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+.text-lg {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+
+.text-sm {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+.text-xl {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
+.text-xs {
+  font-size: 0.75rem;
+  line-height: 1rem;
+}
+
+.font-bold {
+  font-weight: 700;
+}
+
+.font-extrabold {
+  font-weight: 800;
+}
+
+.font-medium {
+  font-weight: 500;
+}
+
+.font-normal {
+  font-weight: 400;
+}
+
+.font-semibold {
+  font-weight: 600;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.not-italic {
+  font-style: normal;
+}
+
+.tabular-nums {
+  --tw-numeric-spacing: tabular-nums;
+  font-variant-numeric: var(--tw-ordinal) var(--tw-slashed-zero) var(--tw-numeric-figure) var(--tw-numeric-spacing) var(--tw-numeric-fraction);
+}
+
+.leading-\[0\.88\] {
+  line-height: 0.88;
+}
+
+.leading-\[0\.8\] {
+  line-height: 0.8;
+}
+
+.leading-\[0\.92\] {
+  line-height: 0.92;
+}
+
+.leading-\[0\.95\] {
+  line-height: 0.95;
+}
+
+.leading-\[0\.9\] {
+  line-height: 0.9;
+}
+
+.leading-none {
+  line-height: 1;
+}
+
+.leading-relaxed {
+  line-height: 1.625;
+}
+
+.leading-snug {
+  line-height: 1.375;
+}
+
+.leading-tight {
+  line-height: 1.25;
+}
+
+.tracking-\[-0\.01em\] {
+  letter-spacing: -0.01em;
+}
+
+.tracking-\[-0\.03em\] {
+  letter-spacing: -0.03em;
+}
+
+.tracking-\[0\.01em\] {
+  letter-spacing: 0.01em;
+}
+
+.tracking-\[0\.02em\] {
+  letter-spacing: 0.02em;
+}
+
+.tracking-\[0\.04em\] {
+  letter-spacing: 0.04em;
+}
+
+.tracking-\[0\.08em\] {
+  letter-spacing: 0.08em;
+}
+
+.tracking-\[0\.12em\] {
+  letter-spacing: 0.12em;
+}
+
+.tracking-\[0\.14em\] {
+  letter-spacing: 0.14em;
+}
+
+.tracking-\[0\.16em\] {
+  letter-spacing: 0.16em;
+}
+
+.tracking-\[0\.1em\] {
+  letter-spacing: 0.1em;
+}
+
+.tracking-wide {
+  letter-spacing: 0.025em;
+}
+
+.text-alerta-texto {
+  --tw-text-opacity: 1;
+  color: rgb(var(--alerta-texto) / var(--tw-text-opacity, 1));
+}
+
+.text-aviso {
+  --tw-text-opacity: 1;
+  color: rgb(var(--aviso) / var(--tw-text-opacity, 1));
+}
+
+.text-barra-texto {
+  --tw-text-opacity: 1;
+  color: rgb(var(--barra-texto) / var(--tw-text-opacity, 1));
+}
+
+.text-barra-texto\/75 {
+  color: rgb(var(--barra-texto) / 0.75);
+}
+
+.text-cta {
+  --tw-text-opacity: 1;
+  color: rgb(var(--cta) / var(--tw-text-opacity, 1));
+}
+
+.text-cta-texto {
+  --tw-text-opacity: 1;
+  color: rgb(var(--cta-texto) / var(--tw-text-opacity, 1));
+}
+
+.text-destaque {
+  --tw-text-opacity: 1;
+  color: rgb(var(--destaque) / var(--tw-text-opacity, 1));
+}
+
+.text-destaque-texto {
+  --tw-text-opacity: 1;
+  color: rgb(var(--destaque-texto) / var(--tw-text-opacity, 1));
+}
+
+.text-faixa {
+  --tw-text-opacity: 1;
+  color: rgb(var(--faixa) / var(--tw-text-opacity, 1));
+}
+
+.text-fundo {
+  --tw-text-opacity: 1;
+  color: rgb(var(--fundo) / var(--tw-text-opacity, 1));
+}
+
+.text-logo {
+  --tw-text-opacity: 1;
+  color: rgb(var(--logo) / var(--tw-text-opacity, 1));
+}
+
+.text-ouro {
+  --tw-text-opacity: 1;
+  color: rgb(var(--ouro) / var(--tw-text-opacity, 1));
+}
+
+.text-papel-texto {
+  --tw-text-opacity: 1;
+  color: rgb(var(--papel-texto) / var(--tw-text-opacity, 1));
+}
+
+.text-perigo {
+  --tw-text-opacity: 1;
+  color: rgb(var(--perigo) / var(--tw-text-opacity, 1));
+}
+
+.text-sucesso {
+  --tw-text-opacity: 1;
+  color: rgb(var(--sucesso) / var(--tw-text-opacity, 1));
+}
+
+.text-texto {
+  --tw-text-opacity: 1;
+  color: rgb(var(--texto) / var(--tw-text-opacity, 1));
+}
+
+.text-texto-suave {
+  --tw-text-opacity: 1;
+  color: rgb(var(--texto-suave) / var(--tw-text-opacity, 1));
+}
+
+.underline {
+  text-decoration-line: underline;
+}
+
+.opacity-75 {
+  opacity: 0.75;
+}
+
+.opacity-90 {
+  opacity: 0.9;
+}
+
+.shadow-2xl {
+  --tw-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+  --tw-shadow-colored: 0 25px 50px -12px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.shadow-\[0_0_0_5px_rgb\(var\(--destaque\)\/0\.25\)\] {
+  --tw-shadow: 0 0 0 5px rgb(var(--destaque)/0.25);
+  --tw-shadow-colored: 0 0 0 5px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.shadow-\[inset_6px_0_0_rgb\(var\(--selecao\)\)\] {
+  --tw-shadow: inset 6px 0 0 rgb(var(--selecao));
+  --tw-shadow-colored: inset 6px 0 0 var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.outline-none {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+
+.ring-4 {
+  --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
+  --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(4px + var(--tw-ring-offset-width)) var(--tw-ring-color);
+  box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
+}
+
+.ring-fundo {
+  --tw-ring-opacity: 1;
+  --tw-ring-color: rgb(var(--fundo) / var(--tw-ring-opacity, 1));
+}
+
+.invert {
+  --tw-invert: invert(100%);
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+
+.filter {
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+
+.transition-colors {
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.\[accent-color\:rgb\(var\(--cta\)\)\] {
+  accent-color: rgb(var(--cta));
+}
+
+.\[text-wrap\:balance\] {
+  text-wrap: balance;
+}
+
+/* -----------------------------------------------------------------------------
+   Tokens como TRIPLAS RGB, consumidos pelo Tailwind como
+   rgb(var(--x) / <alpha-value>). Nunca hex no JSX: cor nova entra aqui.
+
+   UMA identidade só ("tudo no mesmo padrão"): a pista do cartaz do evento,
+   na página pública E na mesa da organização.
+   UM tema só: o verde do cartaz, qualquer que seja o tema do aparelho.
+   .marca-evento continua nas páginas públicas, sem tokens próprios.
+   -------------------------------------------------------------------------- */
+
+:root {
+  color-scheme: dark;
+  --fundo: 22 63 34;
+  --superficie: 28 75 42;
+  --superficie-2: 22 63 34;
+  --texto: 238 245 232;
+  --texto-suave: 169 196 164;
+  --borda: 47 100 66;
+  --trilho: 47 100 66;
+  --destaque: 155 197 61;
+  --destaque-texto: 15 46 22;
+  --cta: 155 197 61;
+  --cta-texto: 15 46 22;
+  --selecao: 155 197 61;
+  --esgotado: 18 52 28;
+  --esgotado-texto: 169 191 166;
+  --aviso: 255 224 138;
+  --perigo: 255 170 150;
+  --sucesso: 155 197 61;
+  --faixa: 155 197 61;
+  --logo: 255 255 255;
+  --ouro: 242 193 78;
+  --alerta: 245 158 11;
+  --alerta-texto: 26 14 0;
+  --barra: 7 22 12;
+  --barra-texto: 238 245 232;
+  /* o papel do cartaz do QR Code: o código escuro no claro (QR invertido muita câmera não lê) */
+  --papel: 255 255 255;
+  --papel-texto: 15 46 22;
+}
+
+/* O cartaz do QR Code (/org/qrcode) sai sozinho na folha. */
+
+@media print {
+  @page {
+    size: A4 portrait;
+
+    margin: 14mm;
+  }
+
+  html,
+  body {
+    background: rgb(var(--papel)) !important;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+.placeholder\:font-medium::-moz-placeholder {
+  font-weight: 500;
+}
+
+.placeholder\:font-medium::placeholder {
+  font-weight: 500;
+}
+
+.placeholder\:text-texto-suave::-moz-placeholder {
+  --tw-text-opacity: 1;
+  color: rgb(var(--texto-suave) / var(--tw-text-opacity, 1));
+}
+
+.placeholder\:text-texto-suave::placeholder {
+  --tw-text-opacity: 1;
+  color: rgb(var(--texto-suave) / var(--tw-text-opacity, 1));
+}
+
+.last\:border-0:last-child {
+  border-width: 0px;
+}
+
+.focus-within\:border-selecao:focus-within {
+  --tw-border-opacity: 1;
+  border-color: rgb(var(--selecao) / var(--tw-border-opacity, 1));
+}
+
+.hover\:bg-superficie:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(var(--superficie) / var(--tw-bg-opacity, 1));
+}
+
+.hover\:text-barra-texto:hover {
+  --tw-text-opacity: 1;
+  color: rgb(var(--barra-texto) / var(--tw-text-opacity, 1));
+}
+
+.hover\:text-texto:hover {
+  --tw-text-opacity: 1;
+  color: rgb(var(--texto) / var(--tw-text-opacity, 1));
+}
+
+.focus\:border-selecao:focus {
+  --tw-border-opacity: 1;
+  border-color: rgb(var(--selecao) / var(--tw-border-opacity, 1));
+}
+
+.disabled\:opacity-40:disabled {
+  opacity: 0.4;
+}
+
+.disabled\:opacity-50:disabled {
+  opacity: 0.5;
+}
+
+.disabled\:opacity-60:disabled {
+  opacity: 0.6;
+}
+
+@media (min-width: 768px) {
+  .md\:order-none {
+    order: 0;
+  }
+
+  .md\:col-span-1 {
+    grid-column: span 1 / span 1;
+  }
+
+  .md\:col-span-3 {
+    grid-column: span 3 / span 3;
+  }
+
+  .md\:col-start-3 {
+    grid-column-start: 3;
+  }
+
+  .md\:col-start-4 {
+    grid-column-start: 4;
+  }
+
+  .md\:col-start-5 {
+    grid-column-start: 5;
+  }
+
+  .md\:row-start-1 {
+    grid-row-start: 1;
+  }
+
+  .md\:grid {
+    display: grid;
+  }
+
+  .md\:w-\[240px\] {
+    width: 240px;
+  }
+
+  .md\:w-auto {
+    width: auto;
+  }
+
+  .md\:flex-1 {
+    flex: 1 1 0%;
+  }
+
+  .md\:grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .md\:grid-cols-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .md\:grid-cols-\[1fr_9rem_auto\] {
+    grid-template-columns: 1fr 9rem auto;
+  }
+
+  .md\:grid-cols-\[34px_220px_minmax\(0\2c 1fr\)_96px_150px\] {
+    grid-template-columns: 34px 220px minmax(0,1fr) 96px 150px;
+  }
+
+  .md\:grid-cols-\[minmax\(0\2c 1fr\)_420px\] {
+    grid-template-columns: minmax(0,1fr) 420px;
+  }
+
+  .md\:items-end {
+    align-items: flex-end;
+  }
+
+  .md\:items-center {
+    align-items: center;
+  }
+
+  .md\:gap-16 {
+    gap: 4rem;
+  }
+
+  .md\:p-8 {
+    padding: 2rem;
+  }
+
+  .md\:px-8 {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  .md\:text-\[54px\] {
+    font-size: 54px;
+  }
+
+  .md\:text-\[76px\] {
+    font-size: 76px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .lg\:grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .lg\:grid-cols-\[20rem_1fr\] {
+    grid-template-columns: 20rem 1fr;
+  }
+
+  .lg\:grid-cols-\[minmax\(0\2c 1fr\)_360px\] {
+    grid-template-columns: minmax(0,1fr) 360px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .xl\:sticky {
+    position: sticky;
+  }
+
+  .xl\:top-4 {
+    top: 1rem;
+  }
+
+  .xl\:grid-cols-8 {
+    grid-template-columns: repeat(8, minmax(0, 1fr));
+  }
+
+  .xl\:grid-cols-\[1fr_22rem\] {
+    grid-template-columns: 1fr 22rem;
+  }
+
+  .xl\:grid-cols-\[minmax\(0\2c 46rem\)_minmax\(0\2c 1fr\)\] {
+    grid-template-columns: minmax(0,46rem) minmax(0,1fr);
+  }
+}
+
+@media print {
+  .print\:mt-10 {
+    margin-top: 2.5rem;
+  }
+
+  .print\:mt-8 {
+    margin-top: 2rem;
+  }
+
+  .print\:hidden {
+    display: none;
+  }
+
+  .print\:w-\[70mm\] {
+    width: 70mm;
+  }
+
+  .print\:max-w-\[115mm\] {
+    max-width: 115mm;
+  }
+
+  .print\:max-w-none {
+    max-width: none;
+  }
+
+  .print\:rounded-none {
+    border-radius: 0px;
+  }
+
+  .print\:bg-papel {
+    --tw-bg-opacity: 1;
+    background-color: rgb(var(--papel) / var(--tw-bg-opacity, 1));
+  }
+
+  .print\:p-0 {
+    padding: 0px;
+  }
+
+  .print\:px-0 {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
+  .print\:py-0 {
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
+
+  .print\:text-2xl {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+
+  .print\:text-3xl {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+  }
+
+  .print\:text-\[64px\] {
+    font-size: 64px;
+  }
+
+  .print\:text-xl {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+
+  .print\:shadow-none {
+    --tw-shadow: 0 0 #0000;
+    --tw-shadow-colored: 0 0 #0000;
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  }
+}
+
+.\[\&_input\]\:pr-12 input {
+  padding-right: 3rem;
+}
+
+.\[\&_td\]\:whitespace-nowrap td {
+  white-space: nowrap;
+}
+
+/* -----------------------------------------------------------------------------
+   Demonstração: o selo fixo, a troca página/mesa e a dica de matrículas.
+   -------------------------------------------------------------------------- */
+.demo-selo {
+  position: fixed;
+  z-index: 60;
+  left: 50%;
+  bottom: 10px;
+  transform: translateX(-50%);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 6px 10px;
+  max-width: calc(100vw - 16px);
+  padding: 6px 8px 6px 12px;
+  border-radius: 999px;
+  background: rgb(var(--barra) / 0.94);
+  color: rgb(var(--barra-texto));
+  box-shadow: 0 6px 24px rgb(0 0 0 / 0.35);
+  border: 1px solid rgb(var(--borda));
+  font-size: 12px;
+  line-height: 1.2;
+}
+.demo-selo-rotulo {
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: rgb(var(--aviso));
+}
+.demo-selo-troca {
+  display: flex;
+  gap: 2px;
+  padding: 2px;
+  border-radius: 999px;
+  background: rgb(var(--superficie));
+}
+.demo-selo-troca a {
+  padding: 5px 10px;
+  border-radius: 999px;
+  font-weight: 600;
+  color: rgb(var(--texto-suave));
+  text-decoration: none;
+  white-space: nowrap;
+}
+.demo-selo-troca a[aria-current='page'] {
+  background: rgb(var(--destaque));
+  color: rgb(var(--destaque-texto));
+}
+.demo-selo-recomecar {
+  padding: 5px 6px;
+  font-weight: 600;
+  color: rgb(var(--texto-suave));
+  text-decoration: underline;
+}
+body { padding-bottom: 64px; }
+.demo-dica {
+  margin-top: 12px;
+  display: grid;
+  gap: 6px;
+  padding: 10px 12px;
+  border: 2px dashed rgb(var(--aviso) / 0.7);
+  border-radius: 14px;
+  font-size: 13px;
+}
+.demo-dica b {
+  color: rgb(var(--aviso));
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-size: 12px;
+}
+.demo-dica ul { display: grid; gap: 4px; }
+.demo-dica li { display: flex; align-items: center; gap: 8px; }
+.demo-dica button {
+  min-width: 74px;
+  padding: 3px 8px;
+  border-radius: 8px;
+  background: rgb(var(--trilho));
+  color: rgb(var(--texto));
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  font-variant-numeric: tabular-nums;
+}
+.demo-dica span { color: rgb(var(--texto-suave)); }
