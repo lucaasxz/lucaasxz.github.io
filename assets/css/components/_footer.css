@@ -29,3 +29,6 @@ footer p {
   transition: color 0.2s;
 }
 .footer-links a:hover { color: #fff; }
+
+/* espaço para o botão voltar ao topo, que fica fixo no canto */
+footer .footer-inner { padding-right: 5.5rem; }
