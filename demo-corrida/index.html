@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#163F22" />
+    <meta name="description" content="Demonstração navegável do sistema de inscrições de uma corrida corporativa, com dados fictícios." />
+    <title>Corrida 2026 | Inscrição (demonstração)</title>
+    <link rel="stylesheet" href="./fontes/fontes.css" />
+    <link rel="stylesheet" href="./css/corrida.css" />
+    <!--
+      Demonstração estática: sem compilação e sem servidor. O navegador carrega os
+      módulos de ./js direto; o import map dá nome às bibliotecas de ./vendor
+      (Preact no lugar do React, clsx) e aos substitutos mínimos de ./js/shims.
+      A API é simulada no próprio navegador (js/lib/demo/), com dados fictícios.
+    -->
+    <script type="importmap">
+      {
+        "imports": {
+          "preact": "./vendor/preact/preact.module.js",
+          "preact/hooks": "./vendor/preact/hooks/hooks.module.js",
+          "preact/compat": "./vendor/preact/compat/compat.module.js",
+          "react": "./vendor/preact/compat/compat.module.js",
+          "react-dom": "./vendor/preact/compat/compat.module.js",
+          "react-dom/client": "./vendor/preact/compat/client.mjs",
+          "react-router-dom": "./js/shims/react-router-dom.js",
+          "lucide-react": "./js/shims/lucide-react.js",
+          "clsx": "./vendor/clsx/clsx.mjs"
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="./js/main.js"></script>
+  </body>
+</html>

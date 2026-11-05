@@ -1,5 +1,4 @@
 import { initDarkMode }       from './modules/darkMode.js';
-import { initCursor }         from './modules/cursor.js';
 import { initScrollProgress } from './modules/scrollProgress.js';
 import { initNavbar }         from './modules/navbar.js';
 import { initScrollReveal }   from './modules/scrollReveal.js';
@@ -13,7 +12,6 @@ import { initDemoModal }      from './modules/demoModal.js';
 
 document.addEventListener('DOMContentLoaded', () => {
   initDarkMode();
-  initCursor();
   initScrollProgress();
   initSkeletonLoader();
   initNavbar();
