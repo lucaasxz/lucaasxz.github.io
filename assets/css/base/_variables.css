@@ -11,6 +11,7 @@
   --blue:  #4a72c4;
   --rose:  #d4648a;
   --olive: #7a8c44;
+  --slate: #5b6478;
 
   --radius:    18px;
   --radius-sm: 10px;
@@ -27,4 +28,5 @@
   --text:       #f0eeea;
   --text-muted: #888880;
   --border:     #2e2e2e;
+  --slate:      #9aa3b8;
 }

@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" width="1600" height="1000" role="img" aria-label="Entrada liberada na portaria">
+  <defs>
+    <radialGradient id="fundo" cx="50%" cy="45%" r="75%">
+      <stop offset="0%" stop-color="#1E1E1E"/>
+      <stop offset="100%" stop-color="#050505"/>
+    </radialGradient>
+    <pattern id="grade" width="80" height="80" patternUnits="userSpaceOnUse">
+      <path d="M80 0H0V80" fill="none" stroke="#FFFFFF" stroke-opacity="0.035" stroke-width="1"/>
+    </pattern>
+    <linearGradient id="feixe" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#4F5D95" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#4F5D95" stop-opacity="0.35"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1600" height="1000" fill="url(#fundo)"/>
+  <rect width="1600" height="1000" fill="url(#grade)"/>
+
+  <!-- Composicao deslocada para a faixa central: a esquerda da tela e area de
+       texto do hero e a direita fica sob o painel de 480px do formulario. -->
+  <g transform="translate(206 140) scale(0.62)">
+
+  <!-- Pórtico da portaria. -->
+  <g stroke="#EAE5DF" stroke-opacity="0.5" stroke-width="4" fill="#121212">
+    <rect x="440" y="190" width="720" height="70" rx="8"/>
+    <rect x="470" y="260" width="56" height="580" rx="6"/>
+    <rect x="1074" y="260" width="56" height="580" rx="6"/>
+  </g>
+  <!-- Faixa da marca na travessa. -->
+  <rect x="440" y="244" width="720" height="10" fill="#4F5D95" fill-opacity="0.8"/>
+
+  <!-- Leitora de crachá na coluna de saída, acesa. -->
+  <rect x="1044" y="470" width="40" height="90" rx="8" fill="#161616" stroke="#EAE5DF" stroke-opacity="0.5" stroke-width="3"/>
+  <circle cx="1064" cy="496" r="8" fill="#4F5D95"/>
+  <rect x="1054" y="516" width="20" height="28" rx="4" fill="#EAE5DF" fill-opacity="0.25"/>
+  <!-- Feixe de leitura, sinal de que a credencial foi reconhecida. -->
+  <rect x="900" y="500" width="144" height="30" fill="url(#feixe)"/>
+
+  <!-- Catraca: poste e os três braços. -->
+  <g>
+    <rect x="778" y="640" width="44" height="200" rx="10" fill="#161616" stroke="#EAE5DF" stroke-opacity="0.5" stroke-width="4"/>
+    <circle cx="800" cy="648" r="26" fill="#121212" stroke="#EAE5DF" stroke-opacity="0.5" stroke-width="4"/>
+    <g stroke="#EAE5DF" stroke-opacity="0.45" stroke-width="16" stroke-linecap="round">
+      <path d="M800 648 H648"/>
+      <path d="M800 648 L932 582"/>
+      <path d="M800 648 L926 724"/>
+    </g>
+  </g>
+
+  <!-- Quem entra: silhueta com capacete, já do lado liberado. -->
+  <g>
+    <path d="M596 600 h56 l18 172 h-16 l-14 -108 -14 108 h-34 z" fill="#EAE5DF" fill-opacity="0.45"/>
+    <circle cx="624" cy="556" r="30" fill="#EAE5DF" fill-opacity="0.45"/>
+    <path d="M592 552 a32 32 0 0 1 64 0 z" fill="#4F5D95" fill-opacity="0.9"/>
+    <rect x="584" y="546" width="80" height="11" rx="5" fill="#4F5D95" fill-opacity="0.9"/>
+  </g>
+
+  <!-- Piso e o sentido da passagem. -->
+  <path d="M300 840 H1300" stroke="#EAE5DF" stroke-opacity="0.3" stroke-width="4"/>
+  <g fill="#4F5D95" fill-opacity="0.55">
+    <path d="M420 886 l40 24 l-40 24 z"/>
+    <path d="M492 886 l40 24 l-40 24 z"/>
+    <path d="M564 886 l40 24 l-40 24 z"/>
+  </g>
+</g>
+</svg>
