@@ -1,0 +1,36 @@
+/* Trechos de código decorativos espalhados pelas seções, no mesmo estilo do topo */
+#projects, #skills, #about, #contact { position: relative; }
+
+.deco-codigo {
+  position: absolute;
+  top: 2.5rem;
+  margin: 0;
+  font-family: ui-monospace, 'Cascadia Code', Consolas, monospace;
+  font-size: 0.74rem;
+  line-height: 1.65;
+  color: #475569;
+  text-align: left;
+  opacity: 0.6;
+  white-space: pre;
+  pointer-events: none;
+  user-select: none;
+}
+.deco-codigo--esq { left:  max(1.5rem, calc(50% - 600px)); }
+.deco-codigo--dir { right: max(1.5rem, calc(50% - 600px)); }
+
+/* no "Sobre Mim" o conteúdo ocupa a largura toda: os trechos vão para as margens */
+.deco-codigo--lateral { top: 50%; translate: 0 -50%; }
+.deco-codigo--lateral.deco-codigo--esq { left: 2rem; }
+.deco-codigo--lateral.deco-codigo--dir { right: 2rem; }
+
+.split-codigo .k, .deco-codigo .k { color: #7c3aed; }
+.split-codigo .s, .deco-codigo .s { color: #0d9488; }
+.split-codigo .t, .deco-codigo .t { color: #0284c7; }
+.split-codigo .c, .deco-codigo .c { color: #94a3b8; }
+
+@media (max-width: 1099px) {
+  .deco-codigo { display: none; }
+}
+@media (max-width: 1749px) {
+  .deco-codigo--lateral { display: none; }
+}

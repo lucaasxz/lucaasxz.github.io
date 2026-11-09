@@ -7,7 +7,7 @@
 }
 
 .nav-inner {
-  max-width: 1080px;
+  max-width: 1560px;
   margin: 0 auto;
   padding: 1rem 2rem;
   display: flex;
@@ -88,27 +88,53 @@
 .hamburger.open span:nth-child(2) { opacity: 0; }
 .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
-/* Mobile menu */
+/* Mobile menu: escuro, links centralizados e redes sociais embaixo */
+#navbar { transition: background 0.25s; }
+#navbar.menu-aberto { background: #111111; border-bottom-color: #111111; }
+#navbar.menu-aberto .nav-brand { color: #ffffff; }
+#navbar.menu-aberto .hamburger span { background: #ffffff; }
+
 .mobile-menu {
   display: none;
-  flex-direction: column;
-  list-style: none;
-  background: var(--bg-white);
-  border-top: 1px solid var(--border);
-  padding: 0.75rem 2rem 1.25rem;
+  background: #1f1f1f;
+  max-height: calc(100vh - 64px);
+  overflow-y: auto;
 }
-
-.mobile-menu.open { display: flex; }
-
-.mobile-link {
-  padding: 0.75rem 0;
-  font-weight: 500;
-  color: var(--text-muted);
-  border-bottom: 1px solid var(--border);
+.mobile-menu.open {
   display: block;
-  text-decoration: none;
-  transition: color 0.2s;
+  animation: menu-abre 0.28s ease;
 }
-.mobile-link:last-child { border-bottom: none; }
-.mobile-link:hover { color: var(--text); }
-.mobile-resume { font-weight: 600; color: var(--text) !important; }
+@keyframes menu-abre {
+  from { opacity: 0; transform: translateY(-8px); }
+  to   { opacity: 1; transform: none; }
+}
+
+.mobile-links { list-style: none; margin: 0; padding: 0; }
+.mobile-link {
+  display: block;
+  padding: 1.05rem 1rem;
+  border-top: 1px solid #333333;
+  font-size: 1.15rem;
+  font-weight: 500;
+  color: #eeeeee;
+  text-align: center;
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s;
+}
+.mobile-link:hover,
+.mobile-link:focus-visible { background: #2a2a2a; color: #ffffff; }
+
+.mobile-social {
+  display: flex;
+  justify-content: center;
+  gap: 2.25rem;
+  padding: 1.1rem 1rem 1.3rem;
+  border-top: 1px solid #333333;
+}
+.mobile-social a { color: #eeeeee; display: flex; transition: opacity 0.2s; }
+.mobile-social a:hover { opacity: 0.7; }
+.mobile-social svg { width: 26px; height: 26px; fill: currentColor; }
+
+@media (prefers-reduced-motion: reduce) {
+  .mobile-menu.open { animation: none; }
+}
