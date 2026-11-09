@@ -24,10 +24,10 @@
   <meta name="twitter:image"       content="https://lucasvinicius.dev.br/assets/images/photo.jpeg" />
 
   <!-- Favicon -->
-  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg?v=2" />
 
   <!-- Styles -->
-  <link rel="stylesheet" href="assets/css/main.css" />
+  <link rel="stylesheet" href="assets/css/main.css?v=20261107h" />
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -50,12 +50,8 @@
       <ul class="nav-links">
         <li><a href="#projects">Projetos</a></li>
         <li><a href="#about">Sobre Mim</a></li>
-        <li><a href="assets/images/Lucas_Vinicius_Curriculo.pdf" target="_blank" rel="noopener" class="nav-resume">Currículo</a></li>
+        <li><a href="assets/images/Lucas_Vinicius_Curriculo.pdf?v=20261106" target="_blank" rel="noopener" class="nav-resume">Currículo</a></li>
       </ul>
-      <button class="theme-toggle" id="themeToggle" aria-label="Ativar modo escuro">
-        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18" aria-hidden="true"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
-        <svg class="icon-sun"  viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18" aria-hidden="true" style="display:none"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
-      </button>
       <button class="hamburger" id="hamburger" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobileMenu">
         <span></span><span></span><span></span>
       </button>
@@ -63,26 +59,44 @@
     <ul class="mobile-menu" id="mobileMenu" aria-hidden="true">
       <li><a href="#projects" class="mobile-link">Projetos</a></li>
       <li><a href="#about"    class="mobile-link">Sobre Mim</a></li>
-      <li><a href="assets/images/Lucas_Vinicius_Curriculo.pdf" target="_blank" rel="noopener" class="mobile-link mobile-resume">Currículo ↗</a></li>
+      <li><a href="assets/images/Lucas_Vinicius_Curriculo.pdf?v=20261106" target="_blank" rel="noopener" class="mobile-link mobile-resume">Currículo ↗</a></li>
     </ul>
   </nav>
 
   <!-- HERO -->
   <section id="hero" aria-label="Apresentação">
-    <div class="hero-layout">
-      <div class="hero-text">
-        <h1 class="hero-title">Olá,<br>Sou Lucas!</h1>
-        <p class="hero-desc">
-          Um desenvolvedor apaixonado por tecnologia que transforma criatividade em aplicações reais — criando projetos modernos com Flutter, JavaScript e desenvolvimento web, unindo design, performance e experiência para construir soluções que realmente fazem diferença.
-        </p>
-        <a href="#projects" class="hero-arrow" aria-label="Ver projetos">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="32" height="32">
-            <path d="M12 5v14M5 12l7 7 7-7"/>
-          </svg>
-        </a>
+    <div class="split" id="heroSplit">
+      <h1 class="split-ola">Olá, eu sou o <strong>Lucas Vinicius</strong><span class="sr-only"> — desenvolvedor full stack e cloud &amp; devops</span></h1>
+
+      <div class="split-lado split-lado--dev">
+        <p class="split-titulo">&lt;desenvolvedor&gt;</p>
+        <p class="split-desc">Sistemas web completos com Node.js, TypeScript e React, do banco de dados à interface.</p>
+        <a href="#projects" class="split-cta">Ver projetos <span aria-hidden="true">→</span></a>
       </div>
-      <div class="hero-image">
-        <img src="assets/images/photo.jpeg" alt="Lucas Vinicius" />
+
+      <div class="split-lado split-lado--cloud">
+        <p class="split-titulo">cloud &amp; devops</p>
+        <p class="split-desc">Ambientes na Azure, pipelines de CI/CD no Azure DevOps e containers com Docker e Kubernetes.</p>
+        <a href="assets/images/Lucas_Vinicius_Curriculo.pdf?v=20261106" class="split-cta" target="_blank" rel="noopener">Baixar currículo <span aria-hidden="true">↓</span></a>
+      </div>
+
+      <pre class="split-codigo" aria-hidden="true">apiVersion: apps/v1
+kind: Deployment
+spec:
+  replicas: 3
+  template:
+    spec:
+      containers:
+        - name: api
+          image: acr.azurecr.io/api
+- task: AzureCLI@2
+  inputs:
+    scriptType: bash
+az aks get-credentials</pre>
+
+      <div class="split-palco">
+        <img class="split-img split-img--real" src="assets/images/hero-real.webp?v=4" alt="Lucas Vinicius" width="800" height="800" />
+        <img class="split-img split-img--codigo" src="assets/images/hero-codigo.webp?v=3" alt="" aria-hidden="true" width="800" height="800" />
       </div>
     </div>
   </section>
@@ -130,15 +144,17 @@
         </article>
 
 
-        <article class="project-card project-card--private" data-category="web">
-          <div class="project-image project-image--slate">
+        <article class="project-card" data-category="web">
+          <button type="button" class="project-image-link" data-demo-src="demo-visto/index.html" data-demo-type="web" aria-label="Abrir a demonstração: Visto">
+            <div class="project-image project-image--slate">
             <img src="assets/images/visto.jpg" alt="Tela do sistema Visto — Gestão de Terceiros com dados fictícios" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;" />
           </div>
+          </button>
           <div class="project-info">
             <span class="project-category project-category--slate">SISTEMA WEB · COMPLIANCE</span>
             <h3>Visto — Gestão de Terceiros</h3>
-            <p>Sistema que libera a entrada de trabalhadores de empresas terceiras na planta após a conferência da documentação. Tem portal próprio para a terceira enviar documentos, mesas de análise por setor, requisições com trilha de etapas, turmas de integração com presença assinada por QR Code e PDF com código de verificação, acervo com revisões e chat por setor. Privacidade desde o design (LGPD): retenção, expurgo e auditoria de acesso a dados de saúde.</p>
-            <ul class="project-stack" aria-label="Tecnologias"><li>React</li><li>TypeScript</li><li>Node.js</li><li>PostgreSQL</li><li>MFA/TOTP</li><li>pdf-lib</li><li>Vercel</li><li>Docker</li></ul>
+            <p>Sistema que libera a entrada de trabalhadores terceiros na planta após a conferência da documentação, com portal para a terceira enviar documentos, análise por setor e integração com presença por QR Code.</p>
+            <ul class="project-stack" aria-label="Tecnologias"><li>React</li><li>TypeScript</li><li>Node.js</li><li>PostgreSQL</li><li>MFA/TOTP</li><li>pdf-lib</li><li>Docker</li></ul>
             <div class="project-card-links">
               <button class="project-text-link" data-demo-src="demo-visto/index.html" data-demo-type="web">Demo ao vivo ↗</button>
               <a href="demo-visto/index.html" target="_blank" rel="noopener" class="project-text-link">Abrir em tela cheia ↗</a>
@@ -147,15 +163,17 @@
           </div>
         </article>
 
-        <article class="project-card project-card--private" data-category="web">
-          <div class="project-image project-image--rose">
+        <article class="project-card" data-category="web">
+          <button type="button" class="project-image-link" data-demo-src="demo-indicadores/index.html" data-demo-type="web" aria-label="Abrir a demonstração: Indicadores de RH">
+            <div class="project-image project-image--rose">
             <img src="assets/images/indicadores.jpg" alt="Tela do sistema Indicadores de RH com dados fictícios" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;" />
           </div>
+          </button>
           <div class="project-info">
             <span class="project-category project-category--rose">PLATAFORMA DE INDICADORES · RH</span>
             <h3>Indicadores de RH</h3>
-            <p>Plataforma de indicadores para as áreas de Recursos Humanos: dashboards mensais com metas, resumo executivo, plano de ação (Fato-Causa-Ação) e uma visão gerencial com modo apresentação para a reunião de resultados. Inclui módulo de People Analytics com organograma, matriz RACI e quadro de tarefas. Gráficos feitos à mão em SVG, sem biblioteca, auditoria de cada alteração e acesso por convite com autenticação em dois fatores.</p>
-            <ul class="project-stack" aria-label="Tecnologias"><li>React</li><li>TypeScript</li><li>Vite</li><li>Tailwind</li><li>PostgreSQL</li><li>Vitest</li><li>Vercel</li></ul>
+            <p>Plataforma de indicadores de RH com dashboards mensais, metas, plano de ação e modo apresentação para a reunião de resultados. Gráficos feitos em SVG e acesso com autenticação em dois fatores.</p>
+            <ul class="project-stack" aria-label="Tecnologias"><li>React</li><li>TypeScript</li><li>Vite</li><li>Tailwind</li><li>PostgreSQL</li><li>Vitest</li></ul>
             <div class="project-card-links">
               <button class="project-text-link" data-demo-src="demo-indicadores/index.html" data-demo-type="web">Demo ao vivo ↗</button>
               <a href="demo-indicadores/index.html" target="_blank" rel="noopener" class="project-text-link">Abrir em tela cheia ↗</a>
@@ -164,14 +182,16 @@
           </div>
         </article>
 
-        <article class="project-card project-card--private" data-category="web">
-          <div class="project-image project-image--olive">
+        <article class="project-card" data-category="web">
+          <button type="button" class="project-image-link" data-demo-src="demo-corrida/index.html" data-demo-type="web" aria-label="Abrir a demonstração: Inscrições da Corrida">
+            <div class="project-image project-image--olive">
             <img src="assets/images/corrida.jpg" alt="Tela do sistema Inscrições da Corrida com dados fictícios" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;" />
           </div>
+          </button>
           <div class="project-info">
             <span class="project-category project-category--olive">SISTEMA WEB · EVENTOS</span>
             <h3>Inscrições da Corrida</h3>
-            <p>Sistema de inscrição para uma corrida corporativa: o participante informa a matrícula, escolhe a modalidade e acompanha a inscrição por link. A organização confere comprovantes, faz inscrições no balcão, controla vagas por turno com lista de espera e sorteio, e exporta relatórios. Backend em PHP puro com SQLite, controle de concorrência nas vagas, limite de requisições e testes de paridade entre as regras do servidor e da tela.</p>
+            <p>Sistema de inscrição para uma corrida corporativa: o participante se inscreve pela matrícula e acompanha por link, e a organização confere comprovantes, controla vagas por turno e exporta relatórios.</p>
             <ul class="project-stack" aria-label="Tecnologias"><li>PHP</li><li>SQLite</li><li>Preact</li><li>Three.js</li><li>GitHub Actions</li></ul>
             <div class="project-card-links">
               <button class="project-text-link" data-demo-src="demo-corrida/index.html" data-demo-type="web">Demo ao vivo ↗</button>
@@ -214,7 +234,7 @@
           <div class="skill-tags">
             <span>Git</span><span>GitHub Actions</span><span>CI/CD</span>
             <span>Azure</span><span>Azure DevOps</span>
-            <span>Docker</span><span>Kubernetes</span><span>Vercel</span>
+            <span>Docker</span><span>Kubernetes</span>
           </div>
         </div>
       </div>
@@ -250,7 +270,7 @@
       <p class="connect-eyebrow">CURTIU O QUE VIU?</p>
       <h2 class="connect-title">Vamos Conectar!</h2>
       <div class="connect-buttons">
-        <a href="assets/images/Lucas_Vinicius_Curriculo.pdf" target="_blank" rel="noopener" class="btn-dark">Currículo</a>
+        <a href="assets/images/Lucas_Vinicius_Curriculo.pdf?v=20261106" target="_blank" rel="noopener" class="btn-dark">Currículo</a>
         <a href="https://www.linkedin.com/in/lucasviniciussilvaalmeida/" target="_blank" rel="noopener" class="btn-outlined">LinkedIn</a>
         <a href="https://github.com/lucaasxz" target="_blank" rel="noopener" class="btn-outlined">GitHub</a>
       </div>
@@ -312,6 +332,6 @@
     </svg>
   </button>
 
-  <script type="module" src="assets/js/main.js"></script>
+  <script type="module" src="assets/js/main.js?v=20261107h"></script>
 </body>
 </html>

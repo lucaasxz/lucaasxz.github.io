@@ -1,17 +1,16 @@
-import { initDarkMode }       from './modules/darkMode.js';
-import { initScrollProgress } from './modules/scrollProgress.js';
-import { initNavbar }         from './modules/navbar.js';
-import { initScrollReveal }   from './modules/scrollReveal.js';
-import { initScrollSpy }      from './modules/scrollSpy.js';
-import { initNavDots }        from './modules/navDots.js';
-import { initBackToTop }      from './modules/backToTop.js';
-import { initCopyEmail }      from './modules/copyEmail.js';
-import { initEmailForm }      from './modules/emailForm.js';
-import { initSkeletonLoader } from './modules/skeletonLoader.js';
-import { initDemoModal }      from './modules/demoModal.js';
+import { initScrollProgress } from './modules/scrollProgress.js?v=20261107h';
+import { initNavbar }         from './modules/navbar.js?v=20261107h';
+import { initScrollReveal }   from './modules/scrollReveal.js?v=20261107h';
+import { initScrollSpy }      from './modules/scrollSpy.js?v=20261107h';
+import { initNavDots }        from './modules/navDots.js?v=20261107h';
+import { initBackToTop }      from './modules/backToTop.js?v=20261107h';
+import { initCopyEmail }      from './modules/copyEmail.js?v=20261107h';
+import { initEmailForm }      from './modules/emailForm.js?v=20261107h';
+import { initSkeletonLoader } from './modules/skeletonLoader.js?v=20261107h';
+import { initDemoModal }      from './modules/demoModal.js?v=20261107h';
+import { initHeroSplit }      from './modules/heroSplit.js?v=20261107h';
 
 document.addEventListener('DOMContentLoaded', () => {
-  initDarkMode();
   initScrollProgress();
   initSkeletonLoader();
   initNavbar();
@@ -22,6 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initCopyEmail();
   initEmailForm();
   initDemoModal();
+  initHeroSplit();
 
   const yearEl = document.getElementById('year');
   if (yearEl) yearEl.textContent = new Date().getFullYear();

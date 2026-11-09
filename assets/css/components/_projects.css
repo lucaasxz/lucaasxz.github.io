@@ -3,6 +3,9 @@
   padding: 5rem 0 6rem;
 }
 
+/* com 3 por linha a seção usa mais da largura da tela */
+#projects .container { max-width: 1440px; }
+
 .projects-heading {
   font-size: clamp(2rem, 4vw, 2.8rem);
   font-weight: 800;
@@ -13,14 +16,23 @@
 
 .projects-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 3.5rem 3rem;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 3rem 2rem;
 }
 
 /* Card */
 .project-card { }
 
-.project-image-link { display: block; text-decoration: none; }
+.project-image-link {
+  display: block;
+  width: 100%;
+  padding: 0;
+  border: 0;
+  background: none;
+  text-align: inherit;
+  text-decoration: none;
+  cursor: pointer;
+}
 
 .project-image {
   width: 100%;
@@ -231,7 +243,6 @@
 .project-image--slate { background: linear-gradient(135deg, #5b6478, #363d4d); }
 .project-category--slate { color: var(--slate); }
 
-.project-card--private .project-image::after { content: none; }
 
 .project-stack {
   display: flex;
