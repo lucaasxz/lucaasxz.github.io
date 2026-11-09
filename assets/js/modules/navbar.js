@@ -7,15 +7,22 @@ export function initNavbar() {
     navbar.classList.toggle('scrolled', window.scrollY > 40);
   });
 
-  hamburger.addEventListener('click', () => {
-    hamburger.classList.toggle('open');
-    mobileMenu.classList.toggle('open');
+  function menu(aberto) {
+    hamburger.classList.toggle('open', aberto);
+    mobileMenu.classList.toggle('open', aberto);
+    navbar.classList.toggle('menu-aberto', aberto);
+    hamburger.setAttribute('aria-expanded', String(aberto));
+    hamburger.setAttribute('aria-label', aberto ? 'Fechar menu' : 'Abrir menu');
+    mobileMenu.setAttribute('aria-hidden', String(!aberto));
+  }
+
+  hamburger.addEventListener('click', () => menu(!mobileMenu.classList.contains('open')));
+
+  mobileMenu.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => menu(false));
   });
 
-  document.querySelectorAll('.mobile-link').forEach(link => {
-    link.addEventListener('click', () => {
-      hamburger.classList.remove('open');
-      mobileMenu.classList.remove('open');
-    });
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape' && mobileMenu.classList.contains('open')) menu(false);
   });
 }

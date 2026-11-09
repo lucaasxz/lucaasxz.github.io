@@ -27,7 +27,7 @@
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg?v=2" />
 
   <!-- Styles -->
-  <link rel="stylesheet" href="assets/css/main.css?v=20261107h" />
+  <link rel="stylesheet" href="assets/css/main.css?v=20261109t" />
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -56,17 +56,33 @@
         <span></span><span></span><span></span>
       </button>
     </div>
-    <ul class="mobile-menu" id="mobileMenu" aria-hidden="true">
-      <li><a href="#projects" class="mobile-link">Projetos</a></li>
-      <li><a href="#about"    class="mobile-link">Sobre Mim</a></li>
-      <li><a href="assets/images/Lucas_Vinicius_Curriculo.pdf?v=20261106" target="_blank" rel="noopener" class="mobile-link mobile-resume">Currículo ↗</a></li>
-    </ul>
+    <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+      <ul class="mobile-links">
+        <li><a href="#hero"     class="mobile-link">Início</a></li>
+        <li><a href="#projects" class="mobile-link">Projetos</a></li>
+        <li><a href="#skills"   class="mobile-link">O que eu uso</a></li>
+        <li><a href="#about"    class="mobile-link">Sobre Mim</a></li>
+        <li><a href="#contact"  class="mobile-link">Contato</a></li>
+        <li><a href="assets/images/Lucas_Vinicius_Curriculo.pdf?v=20261106" target="_blank" rel="noopener" class="mobile-link">Currículo</a></li>
+      </ul>
+      <div class="mobile-social">
+        <a href="https://www.linkedin.com/in/lucasviniciussilvaalmeida/" target="_blank" rel="noopener" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.75h4v11.25H3zM9.5 9.75h3.8v1.6h.06c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.77 2.65 4.77 6.1V21h-4v-4.9c0-1.17-.02-2.68-1.63-2.68-1.64 0-1.89 1.28-1.89 2.6V21h-4z"/></svg>
+        </a>
+        <a href="https://github.com/lucaasxz" target="_blank" rel="noopener" aria-label="GitHub">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.52-1.33-1.28-1.69-1.28-1.69-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.84 1.19 3.1 0 4.42-2.7 5.4-5.26 5.68.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5z"/></svg>
+        </a>
+        <a href="mailto:lucasviniciussilvaalmeida@gmail.com" aria-label="E-mail">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5h18a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1zm9 7.2L4 7.3V17h16V7.3zM5.2 7l6.8 4.2L18.8 7z"/></svg>
+        </a>
+      </div>
+    </div>
   </nav>
 
   <!-- HERO -->
   <section id="hero" aria-label="Apresentação">
     <div class="split" id="heroSplit">
-      <h1 class="split-ola">Olá, eu sou o <strong>Lucas Vinicius</strong><span class="sr-only"> — desenvolvedor full stack e cloud &amp; devops</span></h1>
+      <h1 class="sr-only">Lucas Vinicius — desenvolvedor full stack e cloud &amp; devops</h1>
 
       <div class="split-lado split-lado--dev">
         <p class="split-titulo">&lt;desenvolvedor&gt;</p>
@@ -80,29 +96,51 @@
         <a href="assets/images/Lucas_Vinicius_Curriculo.pdf?v=20261106" class="split-cta" target="_blank" rel="noopener">Baixar currículo <span aria-hidden="true">↓</span></a>
       </div>
 
-      <pre class="split-codigo" aria-hidden="true">apiVersion: apps/v1
-kind: Deployment
-spec:
-  replicas: 3
-  template:
-    spec:
-      containers:
-        - name: api
-          image: acr.azurecr.io/api
-- task: AzureCLI@2
-  inputs:
-    scriptType: bash
-az aks get-credentials</pre>
+      <pre class="split-codigo split-codigo--dev" style="right: calc(50% + var(--perto) + 40px); top: 5%" aria-hidden="true"><span class="k">interface</span> <span class="t">Inscricao</span> {
+  id: <span class="t">number</span>;
+  matricula: <span class="t">string</span>;
+  turno: <span class="t">Turno</span>;
+}</pre>
+
+      <pre class="split-codigo split-codigo--dev" style="right: calc(50% + var(--perto)); top: 66%" aria-hidden="true"><span class="k">export async function</span> listarVagas(req, res) {
+  <span class="k">const</span> { rows } = <span class="k">await</span> db.query(
+    <span class="s">'SELECT turno, vagas FROM grupos'</span>
+  );
+  <span class="k">return</span> res.json(rows);
+}</pre>
+
+      <pre class="split-codigo split-codigo--cloud" style="left: calc(50% + var(--perto) + 40px); top: 5%" aria-hidden="true"><span class="k">FROM</span> node:20-alpine
+<span class="k">WORKDIR</span> /app
+<span class="k">COPY</span> . .
+<span class="k">RUN</span> npm ci &amp;&amp; npm run build
+<span class="k">CMD</span> [<span class="s">"node"</span>, <span class="s">"dist/server.js"</span>]</pre>
+
+      <pre class="split-codigo split-codigo--cloud" style="left: calc(50% + var(--perto)); top: 66%" aria-hidden="true"><span class="k">apiVersion</span>: apps/v1
+<span class="k">kind</span>: <span class="t">Deployment</span>
+<span class="k">spec</span>:
+  <span class="k">replicas</span>: 3
+  <span class="k">containers</span>:
+    - <span class="k">image</span>: <span class="s">acr.azurecr.io/api</span></pre>
 
       <div class="split-palco">
-        <img class="split-img split-img--real" src="assets/images/hero-real.webp?v=4" alt="Lucas Vinicius" width="800" height="800" />
-        <img class="split-img split-img--codigo" src="assets/images/hero-codigo.webp?v=3" alt="" aria-hidden="true" width="800" height="800" />
+        <img class="split-img split-img--real" src="assets/images/hero-real.webp?v=5" alt="Lucas Vinicius" width="800" height="800" />
+        <img class="split-img split-img--codigo" src="assets/images/hero-codigo.webp?v=4" alt="" aria-hidden="true" width="800" height="800" />
       </div>
     </div>
   </section>
 
   <!-- PROJECTS (Projetos) -->
   <section id="projects">
+    <pre class="deco-codigo deco-codigo--esq" aria-hidden="true"><span class="c">$</span> git log --oneline
+<span class="t">a1f3c2e</span> feat: demo do sistema de terceiros
+<span class="t">9d2b7e1</span> fix: layout no celular
+<span class="t">4c8e0aa</span> chore: pipeline de deploy</pre>
+    <pre class="deco-codigo deco-codigo--dir" aria-hidden="true"><span class="k">on</span>:
+  <span class="k">push</span>:
+    <span class="k">branches</span>: [<span class="s">main</span>]
+<span class="k">jobs</span>:
+  <span class="k">deploy</span>:
+    <span class="k">runs-on</span>: <span class="s">ubuntu-latest</span></pre>
     <div class="container">
       <h2 class="projects-heading">Projetos</h2>
 
@@ -159,7 +197,6 @@ az aks get-credentials</pre>
               <button class="project-text-link" data-demo-src="demo-visto/index.html" data-demo-type="web">Demo ao vivo ↗</button>
               <a href="demo-visto/index.html" target="_blank" rel="noopener" class="project-text-link">Abrir em tela cheia ↗</a>
             </div>
-            <span class="project-private-note">Projeto corporativo · código privado · demo com dados fictícios</span>
           </div>
         </article>
 
@@ -178,7 +215,6 @@ az aks get-credentials</pre>
               <button class="project-text-link" data-demo-src="demo-indicadores/index.html" data-demo-type="web">Demo ao vivo ↗</button>
               <a href="demo-indicadores/index.html" target="_blank" rel="noopener" class="project-text-link">Abrir em tela cheia ↗</a>
             </div>
-            <span class="project-private-note">Projeto corporativo · código privado · demo com dados fictícios</span>
           </div>
         </article>
 
@@ -197,7 +233,6 @@ az aks get-credentials</pre>
               <button class="project-text-link" data-demo-src="demo-corrida/index.html" data-demo-type="web">Demo ao vivo ↗</button>
               <a href="demo-corrida/index.html" target="_blank" rel="noopener" class="project-text-link">Abrir em tela cheia ↗</a>
             </div>
-            <span class="project-private-note">Projeto corporativo · código privado · demo com dados fictícios</span>
           </div>
         </article>
       </div>
@@ -206,6 +241,15 @@ az aks get-credentials</pre>
 
   <!-- SKILLS -->
   <section id="skills">
+    <pre class="deco-codigo deco-codigo--esq" aria-hidden="true"><span class="s">"dependencies"</span>: {
+  <span class="s">"react"</span>: <span class="s">"^18.3.1"</span>,
+  <span class="s">"express"</span>: <span class="s">"^4.21.0"</span>,
+  <span class="s">"pg"</span>: <span class="s">"^8.13.0"</span>
+}</pre>
+    <pre class="deco-codigo deco-codigo--dir" aria-hidden="true"><span class="k">SELECT</span> setor, <span class="k">COUNT</span>(*) <span class="k">AS</span> total
+<span class="k">FROM</span> requisicoes
+<span class="k">WHERE</span> status = <span class="s">'aprovada'</span>
+<span class="k">GROUP BY</span> setor;</pre>
     <div class="container">
       <h2 class="skills-heading">O que eu uso</h2>
       <div class="skills-grid">
@@ -243,6 +287,15 @@ az aks get-credentials</pre>
 
   <!-- ABOUT -->
   <section id="about">
+    <pre class="deco-codigo deco-codigo--esq deco-codigo--lateral" aria-hidden="true"><span class="k">const</span> lucas = {
+  foco: [<span class="s">'Node.js'</span>, <span class="s">'TypeScript'</span>, <span class="s">'Azure'</span>],
+  aprendendo: <span class="t">true</span>,
+};</pre>
+    <pre class="deco-codigo deco-codigo--dir deco-codigo--lateral" aria-hidden="true"><span class="k">while</span> (lucas.aprendendo) {
+  estudar();
+  construir();
+  compartilhar();
+}</pre>
     <div class="container">
       <div class="about-layout">
         <div class="about-text">
@@ -266,6 +319,13 @@ az aks get-credentials</pre>
 
   <!-- CONTACT -->
   <section id="contact">
+    <pre class="deco-codigo deco-codigo--esq" aria-hidden="true"><span class="k">await</span> fetch(<span class="s">'/api/contato'</span>, {
+  method: <span class="s">'POST'</span>,
+  body: JSON.stringify(mensagem),
+});</pre>
+    <pre class="deco-codigo deco-codigo--dir" aria-hidden="true"><span class="c">$</span> git push origin main
+<span class="s">✓</span> build concluído
+<span class="s">✓</span> deploy em produção</pre>
     <div class="container">
       <p class="connect-eyebrow">CURTIU O QUE VIU?</p>
       <h2 class="connect-title">Vamos Conectar!</h2>
@@ -332,6 +392,6 @@ az aks get-credentials</pre>
     </svg>
   </button>
 
-  <script type="module" src="assets/js/main.js?v=20261107h"></script>
+  <script type="module" src="assets/js/main.js?v=20261109t"></script>
 </body>
 </html>

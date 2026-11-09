@@ -14,18 +14,20 @@
 }
 
 #hero {
+  position: relative;
   background: var(--bg-white);
-  padding-top: 64px;
+  padding-top: 0;
   border-bottom: 1px solid var(--border);
   overflow: hidden;
 }
+
 
 /* ── Desenvolvedor × cloud, com a foto apoiada na base ── */
 .split {
   --corte: 50%;
   position: relative;
-  max-width: 1100px;
-  height: min(calc(100vh - 64px), 580px);
+  max-width: 1560px;
+  height: min(calc(100vh - 64px), 540px);
   min-height: 440px;
   margin: 0 auto;
 }
@@ -39,7 +41,6 @@
   width: min(68vh, 470px);
   aspect-ratio: 1 / 1;
   translate: var(--desloc, 0%) 0;
-  animation: hero-enter 0.9s ease backwards 0.1s;
   /* os ombros somem nas pontas em vez de terminar num corte reto */
   -webkit-mask-image: linear-gradient(90deg, transparent, #000 12%, #000 88%, transparent);
           mask-image: linear-gradient(90deg, transparent, #000 12%, #000 88%, transparent);
@@ -57,15 +58,34 @@
 .split-img--codigo { clip-path: inset(0 calc(100% - var(--corte)) 0 0); }
 .split-img--real   { clip-path: inset(0 0 0 var(--corte)); }
 
+/* entrada: as duas metades chegam separadas e se juntam no meio */
+.split-img--codigo { animation: metade-esq 1.6s cubic-bezier(0.22, 1, 0.36, 1) backwards 0.25s; }
+.split-img--real   { animation: metade-dir 1.6s cubic-bezier(0.22, 1, 0.36, 1) backwards 0.25s; }
+@keyframes metade-esq {
+  0%   { transform: translateX(-14%); opacity: 0; }
+  25%  { opacity: 1; }
+  100% { transform: none; }
+}
+@keyframes metade-dir {
+  0%   { transform: translateX(14%); opacity: 0; }
+  25%  { opacity: 1; }
+  100% { transform: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .split-img--codigo, .split-img--real { animation: none; }
+}
+
 .split-lado {
   position: absolute;
-  top: 34%;
+  top: 32%;
   width: min(25%, 270px);
   z-index: 1;
   animation: hero-enter 0.85s ease backwards 0.3s;
 }
-.split-lado--dev   { left: 1.5rem; opacity: var(--op-dev, 1); }
-.split-lado--cloud { right: 1.5rem; text-align: right; opacity: var(--op-cloud, 1); }
+/* textos e código ancorados no centro, perto do rosto */
+.split { --perto: min(24vh, 185px); }
+.split-lado--dev   { right: calc(50% + var(--perto)); opacity: var(--op-dev, 1); }
+.split-lado--cloud { left: calc(50% + var(--perto)); text-align: right; opacity: var(--op-cloud, 1); }
 
 .split-titulo {
   font-size: clamp(1.3rem, 2vw, 1.95rem);
@@ -121,35 +141,47 @@
 /* código da nuvem bem apagado, atrás da metade real */
 .split-codigo {
   position: absolute;
-  left: 72%;
-  top: 70%;
   margin: 0;
   font-family: ui-monospace, 'Cascadia Code', Consolas, monospace;
-  font-size: clamp(0.66rem, 0.85vw, 0.8rem);
-  line-height: 1.75;
-  color: var(--text-muted);
-  opacity: calc(var(--op-codigo, 0.22) * 0.7);
+  font-size: clamp(0.66rem, 0.8vw, 0.78rem);
+  line-height: 1.65;
+  color: #475569;
   white-space: pre;
   pointer-events: none;
   user-select: none;
 }
+/* respiro nas laterais para não colar na borda nem nos pontos de navegação */
+@media (min-width: 901px) {
+  .split { max-width: min(1560px, calc(100% - 5rem)); }
+}
+
+/* trechos extras só onde há espaço sobrando entre o texto e o rosto */
+.split-codigo--largo { display: none; }
+@media (min-width: 1500px) {
+  .split-codigo--largo { display: block; }
+}
+/* cada lado fica mais forte quando o mouse está nele */
+.split-codigo--dev   { opacity: calc(0.22 + 0.4 * var(--op-dev, 1)); }
+.split-codigo--cloud { opacity: calc(0.22 + 0.4 * var(--op-cloud, 1)); }
 
 /* ── Telas menores: textos em cima, foto embaixo ── */
 @media (max-width: 900px) {
-  .split { height: auto; min-height: 0; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 1rem; padding: 2.5rem 1rem 0; }
-  .split-lado { position: static; width: auto; opacity: 1; }   /* no celular os textos ficam sempre visíveis */
-  .split-lado--dev   { text-align: left; }
-  .split-titulo { font-size: clamp(1.05rem, 4.9vw, 2rem); }
-  .split-desc { font-size: 0.85rem; }
-  .split-codigo { display: none; }
-  .split-ola { position: static; grid-column: 1 / -1; margin-bottom: 0.5rem; }
-  .split-cta { margin-top: 0.75rem; padding: 0.45rem 0.85rem; font-size: 0.75rem; white-space: nowrap; }
-  .split-palco {
-    position: relative;
-    grid-column: 1 / -1;
-    justify-self: center;
-    width: min(100%, 460px);
-    margin-top: 0.5rem;
+  /* no celular fica parado: rosto meio a meio com os títulos ao lado da cabeça */
+  #hero { padding-top: 0; }
+  .split { height: calc(clamp(220px, 64vw, 400px) + 1.5rem); min-height: 0; }
+  .split-ola, .split-desc, .split-cta, .split-codigo { display: none; }
+  .split-palco { width: clamp(220px, 64vw, 400px); translate: none; }
+  /* meio a meio fixo, mesmo numa janela estreita com mouse */
+  .split-img--codigo { clip-path: inset(0 50% 0 0); }
+  .split-img--real   { clip-path: inset(0 0 0 50%); }
+  .split-lado {
+    top: 42%;
+    width: auto;
+    opacity: 1;
+    animation: none;
   }
+  .split-lado--dev   { left: 0.75rem; right: auto; }
+  .split-lado--cloud { right: 0.75rem; left: auto; }
+  .split-titulo { font-size: clamp(0.78rem, 3.4vw, 1.4rem); margin: 0; letter-spacing: -0.02em; }
 }
 
